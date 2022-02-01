@@ -1673,13 +1673,13 @@ boolean clique_print_time(int level, int i, int n, int max,
 	if (ABS(prev_time-realtime)>0.1 || i==n || i<prev_i || max!=prev_max ||
 	    level!=prev_level) {
 		for (j=1; j<level; j++)
-			fprintf(fp,"  ");
+			printf("  ");
 		if (realtime-prev_time < 0.01 || i<=prev_i)
-			fprintf(fp,"%3d/%d (max %2d)  %2.2f s  "
+			printf("%3d/%d (max %2d)  %2.2f s  "
 				"(0.00 s/round)\n",i,n,max,
 				realtime);
 		else
-			fprintf(fp,"%3d/%d (max %2d)  %2.2f s  "
+			printf("%3d/%d (max %2d)  %2.2f s  "
 				"(%2.2f s/round)\n",
 				i,n,max,realtime,
 				(realtime-prev_time)/(i-prev_i));
