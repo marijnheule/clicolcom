@@ -41,9 +41,9 @@ time ./loop-solve.sh graphs/DSJC125.1.col
 #./loop-solve.sh graphs/DSJC500.5.col
 #./loop-solve.sh graphs/DSJC500.9.col
 time ./loop-solve.sh graphs/DSJR500.1.col
-time ./loop-solve.sh graphs/DSJR500.1c.col  ## doable but it takes a while
+#time ./loop-solve.sh graphs/DSJR500.1c.col  ## doable but it takes a while
 ###./loop-solve.sh graphs/DSJR500.5.col   ## might be doable. yalsat with --eager gets down to 6 falsified clauses
-time ./loop-solve.sh graphs/abb313GPIA.col # depends on the seed
+#time ./loop-solve.sh graphs/abb313GPIA.col # depends on the seed
 time ./loop-solve.sh graphs/anna.col
 time ./loop-solve.sh graphs/ash331GPIA.col
 time ./loop-solve.sh graphs/ash608GPIA.col

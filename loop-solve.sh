@@ -3,7 +3,6 @@ BASE=${GRAPH##*/}
 BASE=${BASE%.*}
 
 DIR=tmp
-
 mkdir -p $DIR
 
 echo $GRAPH" "$BASE
@@ -67,7 +66,7 @@ do
         MAX=$(($UP - $j - 1))
         echo "* "$MAX
         j=$(($j + 1))
-        ./maxclique $GRAPH $UP tmp-$UP-$$.mod $j | cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
         ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
         cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
         rm $DIR/clique-$$.ord
