@@ -25,13 +25,13 @@ echo -n "c "
 
 for i in $(eval echo "{$CL..300}")
 do
-  RESULT=`./maxclique $GRAPH $i | cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
+  RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
   if [ "$RESULT" = "$SAT" ]; then
     echo -n "S"
   elif [ "$RESULT" = "$UNS" ]; then
     MAX=$(($i - 1))
     echo "* "$MAX
-    ./maxclique $GRAPH $MAX | cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+    ./maxclique $GRAPH $MAX | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
     ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
     cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
     rm $DIR/clique-$$.ord
@@ -48,7 +48,7 @@ do
       ./color $GRAPH $UP > $DIR/tmp-$$.cnf
 #    ~/yalsat-044/palsat tmp-$$.cnf -v $RANDOM
 #    ubcsat -i tmp-$$.cnf -alg ddfw -cutoff $CO | grep -v -e "#" -e "=" | awk '{if (NF > 0) print $0}'
-      ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
+      ./ubcsat/ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
                 tr " " "\n" | awk '{if ($1 > 0) print $0}' | grep -v "v" > $DIR/tmp-$UP-$$.mod
       SIZE=`wc $DIR/tmp-$UP-$$.mod | awk '{print $1}'`
 #      echo "c SIZE "$SIZE
@@ -56,17 +56,18 @@ do
         EXT=$(($j*$EXT + 1))
         break
       fi
+      rm $DIR/tmp-$$.mod
     done
     for j in $(eval echo "{$EXT..1}")
     do
-      SUB=`./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | cadical | grep SATIS | awk '{print $2}'`
+      SUB=`./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
       if [ "$SUB" = "$SAT" ]; then
         echo -n "S"
       elif [ "$SUB" = "$UNS" ]; then
         MAX=$(($UP - $j - 1))
         echo "* "$MAX
         j=$(($j + 1))
-        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
         ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
         cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
         rm $DIR/clique-$$.ord
@@ -86,7 +87,7 @@ do
 done
 #echo $MAX
 
-LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | cadical --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
+LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
 #echo $MAX
 #wc opt-$$.ord
 if [ "$LEVEL" = "" ]; then
@@ -96,15 +97,15 @@ fi
 
 if (( "$LEVEL" > "15" )); then
   ./color $GRAPH $MAX > $DIR/formula-$$.cnf
-  ubcsat -i $DIR/formula-$$.cnf -alg ddfw -solve -cutoff 100000000 | grep " 1 1"
+  ./ubcsat/ubcsat -i $DIR/formula-$$.cnf -alg ddfw -solve -cutoff 100000000 | grep " 1 1"
   rm $DIR/formula-$$.cnf
   echo "c max clique is equal to chromatic number"
 else
   echo -n "c "
   for i in $(eval echo "{$MAX..200}")
   do
-#    ./color $GRAPH $i opt-$$.ord | cadical --forcephase=1 --phase=1
-    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | cadical | grep SATIS | awk '{print $2}'`
+#    ./color $GRAPH $i opt-$$.ord | ./cadical/build/cadical --forcephase=1 --phase=1
+    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
     if [ "$RESULT" = "$UNS" ]; then
       echo -n "U"
     elif [ "$RESULT" = "$SAT" ]; then
