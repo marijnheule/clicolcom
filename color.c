@@ -73,31 +73,32 @@ int main (int argc, char** argv) {
     printf ("c %i %i\n", verts[i], fixed[verts[i]]);
 */
   int extra = 0;
-  if (argc > 3)
+  if (argc > 3 && size > clique)
     extra = (active - clique) * (colors - 1);
 
-  int nCls = active + extra;
+  int nCls = active + extra - clique;
   for (int i = 0; i < nEdge; i++) {
     int a = edges[2*i  ];
     int b = edges[2*i+1];
-    int count = 0;
-    if (fixed[a]) count++; if (fixed[b]) count++;
-    if (count == 1) nCls += 1;
-    if (count == 0) nCls += colors; }
+    if (!fixed[a] && !fixed[b]) nCls += colors; }
 
   printf ("p cnf %i %i\n", nVertex * colors, nCls);
 
+  int* domain = (int*) malloc (sizeof (int) * (colors + 1));
   for (int i = 0; i < nVertex; i++)
     if (in[i]) {
-      if (fixed[i]) printf ("%i 0\n", i * colors + fixed[i]);
-      else {
+      if (!fixed[i]) { // TODO: also fix clique?
         for (int j = 1; j <= colors; j++)
-          printf ("%i ", i * colors + j);
+          domain[j] = 1;
+        for (int j = 0; j < nVertex; j++)
+          if (adj[j][i]) domain[fixed[j]] = 0;
+        for (int j = 1; j <= colors; j++)
+          if (domain[j]) printf ("%i ", i * colors + j);
         printf ("0\n"); } }
 
-  if (argc > 3)
+  if (argc > 3 && size > clique)
     for (int i = 0; i < nVertex; i++)
-      if (in[i] && !fixed[i])
+      if (in[i])
         for (int j = 2; j <= colors; j++) {
           for (int k = 0; k < i; k++)
             if (in[k]) printf ("%i ", verts[k] * colors + j - 1);
@@ -106,9 +107,7 @@ int main (int argc, char** argv) {
   for (int i = 0; i < nEdge; i++) {
     int a = edges[2*i  ];
     int b = edges[2*i+1];
-    if (fixed[a] && fixed[b]) continue;
-    if (fixed[a]) { printf ("-%i 0\n", b * colors + fixed[a]); continue; }
-    if (fixed[b]) { printf ("-%i 0\n", a * colors + fixed[b]); continue; }
-    for (int j = 1; j <= colors; j++) {
-      printf ("-%i -%i 0\n", a * colors + j, b * colors + j); } }
+    if (!fixed[a] && !fixed[b])
+      for (int j = 1; j <= colors; j++)
+        printf ("-%i -%i 0\n", a * colors + j, b * colors + j); }
 }
