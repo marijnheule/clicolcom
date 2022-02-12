@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// argv[1] : graph in DIMACS format
+// argv[2] : partial ordering as a sequence of vertex numbers
 
 int main (int argc, char** argv) {
   FILE *graph;

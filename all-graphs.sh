@@ -20,7 +20,7 @@ time ./loop-solve.sh graphs/3-Insertions_3.col
 #./loop-solve.sh graphs/3-Insertions_5.col
 time ./loop-solve.sh graphs/4-FullIns_3.col
 time ./loop-solve.sh graphs/4-FullIns_4.col
-#./loop-solve.sh graphs/4-FullIns_5.col
+time ./loop-solve.sh graphs/4-FullIns_5.col
 time ./loop-solve.sh graphs/4-Insertions_3.col
 #./loop-solve.sh graphs/4-Insertions_4.col
 time ./loop-solve.sh graphs/5-FullIns_3.col

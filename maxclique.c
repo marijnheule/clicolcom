@@ -7,6 +7,11 @@
 
 //#define WCNF
 
+// argv[1] : graph in DIMACS format
+// argv[2] : number of colors
+// argv[3] : graph coloring (optinal)
+// argv[4] : offset (optinal, default = 0)
+
 void atmostk (int *array, int size, int bound, int start) {
   // initilize the top right
   printf("-%i 0\n", start + (bound + 1) * size);
