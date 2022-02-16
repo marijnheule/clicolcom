@@ -1,0 +1,7 @@
+option('use_gecode', type : 'boolean', value : false)
+option('gecode', type : 'string',
+       description : 'Root of gecode installation')
+
+option('use_cplex', type : 'boolean', value : false)
+option('cplex', type : 'string',
+       description : 'Root of CPLEX installation')

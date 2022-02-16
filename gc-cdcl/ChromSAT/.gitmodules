@@ -1,0 +1,3 @@
+[submodule "sota/HEAD"]
+	path = sota/HEAD
+	url = https://github.com/graphcoloring/HEAD.git

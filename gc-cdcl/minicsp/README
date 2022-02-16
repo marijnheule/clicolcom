@@ -1,0 +1,83 @@
+This is minicsp, a clause learning CSP solver. It is based on the
+ideas in:
+
+Generalized Nogoods in CSPs. George Katsirelos and Fahiem Bacchus, The
+twentieth national conference on artificial intelligence, AAAI 2005
+
+and
+
+Nogood Processing in CSPs, George Katsirelos, PhD Thesis, University
+of Toronto, 2008.
+
+Directory Layout
+----------------
+
+Minicsp is implemented on top of MiniSat and uses much of the same
+directory structure:
+
+mtl:   data structures written for minisat
+
+core: the solver, including all propagators. the executable produced
+      by this is not useful, as it can only read cnf files.
+
+fz: flatzinc frontend
+
+xcsp: XCSP frontend
+
+test: some unit tests for basic functionality
+
+examples: a few examples of how to use minicsp as a library
+
+Using minicsp
+-------------
+
+You have two options: either use it as a library or via the flatzinc
+or XCSP frontend.
+
+Note that you need boost to compile minicsp if you get it from
+bitbucket or download the plain tarball. If you downloaded the
+-complete tarball, the subset of boost that is necessary to compile
+minicsp is already included.
+
+To use as a library
+-------------------
+
+Use the files in the examples/ subdirectory as guides. A full list of
+constraints is in core/cons.hpp and core/setcons.hpp. You need to add
+core/ to your compiler's include path and link in the .o files in that
+directory.
+
+To use the frontends
+--------------------
+
+Simply invoke 'make' in the corresponding subdirectory (fz/ and xcsp/,
+respectively). Note that the flatzinc frontend requires (a relatively
+recent) bison and flex, while the XCSP frontend requires libxml.
+
+This will generate an executable minicsp-fz (resp. minicsp-xcsp) which
+you invoke as follows:
+
+./minicsp-fz instance.fzn
+
+and
+
+./minicsp-xcsp instance.xml
+
+Supported platforms
+-------------------
+
+minicsp was developed and tested on linux (various versions of Fedora and
+Ubuntu). Additionally, the necessary project files to compile the flatzinc
+frontend using Visual Studio 2013 are provided.
+
+The included Visual Studio project files need the following environment variables
+to be defined on Windows:
+BOOST_DIR: Path to Boost libraries
+LIBXML_INCLUDE: Path to the include directory in your Libxml2 installation
+ICONV_INCLUDE: Path to include directory in your iconv installation. This library 
+is required to make libxml2 work properly.
+
+WARNING: gcc 4.5.x has a bug which causes it to miscompile minicsp
+(and minisat and other solvers based on it) at -O2 and above. Versions
+4.4.x and 4.6.x work fine. If you have to use gcc 4.5.x, using the
+option -fno-tree-pre might help you.

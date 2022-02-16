@@ -1,0 +1,4 @@
+glob:*.o*
+glob:*.gcda
+glob:depend.mk
+glob:fz/parser.tab.*
