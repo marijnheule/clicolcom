@@ -2,9 +2,10 @@ GRAPH=$1
 BASE=${GRAPH##*/}
 BASE=${BASE%.*}
 
-COLORING_DIR=tmp/coloring
 DIR=tmp
 mkdir -p $DIR
+
+COLORING_DIR=tmp/coloring/$BASE
 mkdir -p $COLORING_DIR
 
 echo $GRAPH" "$BASE
@@ -28,6 +29,7 @@ echo -n "c "
 NUM_COLORINGS=1
 for i in $(eval echo "{$CL..300}")
 do
+  echo "i: $i"
   RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
   if [ "$RESULT" = "$SAT" ]; then
     echo -n "S"
@@ -42,6 +44,7 @@ do
   elif [ "$RESULT" = "$UNK" ]; then
     for j in {1..10}
     do
+      echo "j: $j"
       echo "" > $DIR/tmp-$$.mod
       echo -n "|"
       UP=$(($i + $j*$EXT))
@@ -61,9 +64,15 @@ do
 #      echo "c SIZE "$SIZE
        if (( "$SIZE" > "1" )); then
          EXT=$(($j*$EXT + 1))
+         echo "BREAK"
+         echo $EXT
          break
        fi
        rm $DIR/tmp-$$.mod
+      done
+      for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
+      do
+       rm $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
       done
     done
     for j in $(eval echo "{$EXT..1}")
@@ -81,7 +90,7 @@ do
         rm $DIR/clique-$$.ord
         for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
         do
-         rm $DIR/tmp-$UP-$$.mod
+         rm $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
         done
         break
       else

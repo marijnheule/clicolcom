@@ -172,6 +172,7 @@ int main (int argc, char** argv) {
     {
       while ((de = readdir(dr)) != NULL)
       {
+        printf("%s\n", de->d_name);
         FILE *sol = fopen (de->d_name, "r");
         int *in  = (int *) malloc (sizeof (int) * nColor);
         for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1 + (nColor * (numColorings - 1));
