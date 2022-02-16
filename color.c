@@ -74,7 +74,8 @@ int main (int argc, char** argv) {
 */
   int extra = 0;
   if (argc > 3 && size > clique)
-    extra = (active - clique) * (colors - 1);
+    extra = (size - clique) * (colors - 1);
+//    extra = (active - clique) * (colors - 1);
 
   int nCls = active + extra - clique;
   for (int i = 0; i < nEdge; i++) {
@@ -97,10 +98,10 @@ int main (int argc, char** argv) {
         printf ("0\n"); } }
 
   if (argc > 3 && size > clique)
-    for (int i = 0; i < nVertex; i++)
+    for (int i = clique; i < size; i++)
       if (in[i])
         for (int j = 2; j <= colors; j++) {
-          for (int k = 0; k < i; k++)
+          for (int k = clique; k < i; k++)
             if (in[k]) printf ("%i ", verts[k] * colors + j - 1);
           printf ("-%i 0\n", verts[i] * colors + j); }
 
