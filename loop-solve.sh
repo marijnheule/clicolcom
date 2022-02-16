@@ -5,7 +5,7 @@ BASE=${BASE%.*}
 DIR=tmp
 mkdir -p $DIR
 
-COLORING_DIR=tmp/coloring/$BASE
+COLORING_DIR=tmp/coloring/$BASE/
 mkdir -p $COLORING_DIR
 rm $COLORING_DIR/*
 
@@ -30,7 +30,6 @@ echo -n "c "
 NUM_COLORINGS=1
 for i in $(eval echo "{$CL..300}")
 do
-  echo "i: $i"
   RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
   if [ "$RESULT" = "$SAT" ]; then
     echo -n "S"
@@ -45,7 +44,6 @@ do
   elif [ "$RESULT" = "$UNK" ]; then
     for j in {1..10}
     do
-      echo "j: $j"
       echo "" > $DIR/tmp-$$.mod
       echo -n "|"
       UP=$(($i + $j*$EXT))
@@ -59,17 +57,16 @@ do
       SHOULD_BREAK=100
       for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
       do
-       echo "COLORING: $COLORING"
        ./ubcsat/ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
                  tr " " "\n" | awk '{if ($1 > 0) print $0}' | grep -v "v" > $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
        SIZE=`wc $COLORING_DIR/tmp-$UP-$$-$COLORING.mod | awk '{print $1}'`
-       echo "SIZE: $SIZE"
 #      echo "c SIZE "$SIZE
        if (( "$SIZE" < "1" )); then
          SHOULD_BREAK=0
        fi
       done
       if (( "$SHOULD_BREAK" < "1" )); then
+        echo "Removing colorings - not all solutions found"
         for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
         do
          rm $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
