@@ -209,7 +209,7 @@ int main (int argc, char** argv) {
 
         if (offset > 0) {
 #ifdef SINZ
-          atmostk (in, nColor, offset, nVertex + (nColor * (numColorings - 1)));
+          atmostk (in, nColor, offset, nVertex + (nColor * numColorings));
 #endif
 #ifdef DIRECT
           int *out = (int *) malloc (sizeof (int) * nColor);

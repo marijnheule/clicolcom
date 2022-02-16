@@ -7,6 +7,7 @@ mkdir -p $DIR
 
 COLORING_DIR=tmp/coloring/$BASE
 mkdir -p $COLORING_DIR
+rm $COLORING_DIR/*
 
 echo $GRAPH" "$BASE
 
