@@ -172,8 +172,17 @@ int main (int argc, char** argv) {
     {
       while ((de = readdir(dr)) != NULL)
       {
-        printf("%s\n", de->d_name);
-        FILE *sol = fopen (de->d_name, "r");
+        if (!strcmp(de->d_name,".") || !strcmp(de->d_name,".."))
+        {
+          continue;
+        }
+
+        char* name_with_extension;
+        name_with_extension = malloc(strlen(de->d_name) + 1 + strlen(argv[3]));
+        strcpy(name_with_extension, argv[3]);
+        strcat(name_with_extension, de->d_name);
+
+        FILE *sol = fopen (name_with_extension, "r");
         int *in  = (int *) malloc (sizeof (int) * nColor);
         for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1 + (nColor * (numColorings - 1));
 
@@ -208,7 +217,7 @@ int main (int argc, char** argv) {
 #endif
         }
       }
-      closedir(dr);
     }
+    closedir(dr);
   }
 }

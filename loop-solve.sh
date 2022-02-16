@@ -55,25 +55,29 @@ do
 #    ~/yalsat-044/palsat tmp-$$.cnf -v $RANDOM
 #    ubcsat -i tmp-$$.cnf -alg ddfw -cutoff $CO | grep -v -e "#" -e "=" | awk '{if (NF > 0) print $0}'
 
+      SHOULD_BREAK=100
       for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
       do
        echo "COLORING: $COLORING"
        ./ubcsat/ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
                  tr " " "\n" | awk '{if ($1 > 0) print $0}' | grep -v "v" > $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
        SIZE=`wc $COLORING_DIR/tmp-$UP-$$-$COLORING.mod | awk '{print $1}'`
+       echo "SIZE: $SIZE"
 #      echo "c SIZE "$SIZE
-       if (( "$SIZE" > "1" )); then
-         EXT=$(($j*$EXT + 1))
-         echo "BREAK"
-         echo $EXT
-         break
+       if (( "$SIZE" < "1" )); then
+         SHOULD_BREAK=0
        fi
-       rm $DIR/tmp-$$.mod
       done
-      for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
-      do
-       rm $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
-      done
+      if (( "$SHOULD_BREAK" < "1" )); then
+        for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
+        do
+         rm $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
+        done
+         rm $DIR/tmp-$$.mod
+      else
+       EXT=$(($j*$EXT + 1))
+       break
+      fi
     done
     for j in $(eval echo "{$EXT..1}")
     do
