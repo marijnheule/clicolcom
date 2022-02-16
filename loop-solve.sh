@@ -2,8 +2,10 @@ GRAPH=$1
 BASE=${GRAPH##*/}
 BASE=${BASE%.*}
 
+COLORING_DIR=tmp/coloring
 DIR=tmp
 mkdir -p $DIR
+mkdir -p $COLORING_DIR
 
 echo $GRAPH" "$BASE
 
@@ -14,7 +16,7 @@ SAT="SATISFIABLE"
 UNS="UNSATISFIABLE"
 UNK="UNKNOWN"
 
-CL=`(timeout 1 ./cliquer/cl $GRAPH -r degree | grep max | tail -n 1 | tr ")" " " | awk '{print $3}')`
+CL=`(timeout 10 ./cliquer/cl $GRAPH -r degree | grep max | tail -n 1 | tr ")" " " | awk '{print $3}')`
 if [ "$CL" == "" ]; then
   CL=1
 fi
@@ -23,6 +25,7 @@ echo "c initial clique by cliquer: "$CL
 EXT=10
 echo -n "c "
 
+NUM_COLORINGS=1
 for i in $(eval echo "{$CL..300}")
 do
   RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
@@ -48,30 +51,38 @@ do
       ./color $GRAPH $UP > $DIR/tmp-$$.cnf
 #    ~/yalsat-044/palsat tmp-$$.cnf -v $RANDOM
 #    ubcsat -i tmp-$$.cnf -alg ddfw -cutoff $CO | grep -v -e "#" -e "=" | awk '{if (NF > 0) print $0}'
-      ./ubcsat/ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
-                tr " " "\n" | awk '{if ($1 > 0) print $0}' | grep -v "v" > $DIR/tmp-$UP-$$.mod
-      SIZE=`wc $DIR/tmp-$UP-$$.mod | awk '{print $1}'`
+
+      for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
+      do
+       echo "COLORING: $COLORING"
+       ./ubcsat/ubcsat -i $DIR/tmp-$$.cnf -alg ddfw -cutoff $CO -solve | grep -v -e "#" -e "=" | grep "v " | \
+                 tr " " "\n" | awk '{if ($1 > 0) print $0}' | grep -v "v" > $COLORING_DIR/tmp-$UP-$$-$COLORING.mod
+       SIZE=`wc $COLORING_DIR/tmp-$UP-$$-$COLORING.mod | awk '{print $1}'`
 #      echo "c SIZE "$SIZE
-      if (( "$SIZE" > "1" )); then
-        EXT=$(($j*$EXT + 1))
-        break
-      fi
-      rm $DIR/tmp-$$.mod
+       if (( "$SIZE" > "1" )); then
+         EXT=$(($j*$EXT + 1))
+         break
+       fi
+       rm $DIR/tmp-$$.mod
+      done
     done
     for j in $(eval echo "{$EXT..1}")
     do
-      SUB=`./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
+      SUB=`./maxclique $GRAPH $UP $COLORING_DIR $j $NUM_COLORINGS | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
       if [ "$SUB" = "$SAT" ]; then
         echo -n "S"
       elif [ "$SUB" = "$UNS" ]; then
         MAX=$(($UP - $j - 1))
         echo "* "$MAX
         j=$(($j + 1))
-        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+        ./maxclique $GRAPH $UP $COLORING_DIR $j $NUM_COLORINGS | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
         ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
         cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
         rm $DIR/clique-$$.ord
-        rm $DIR/tmp-$UP-$$.mod
+        for COLORING in $(eval echo "{1..$NUM_COLORINGS}")
+        do
+         rm $DIR/tmp-$UP-$$.mod
+        done
         break
       else
         echo "ERROR"

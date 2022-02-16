@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <dirent.h>
 #include <assert.h>
 
 //#define DIRECT
@@ -9,8 +10,9 @@
 
 // argv[1] : graph in DIMACS format
 // argv[2] : number of colors
-// argv[3] : graph coloring (optinal)
-// argv[4] : offset (optinal, default = 0)
+// argv[3] : graph coloring (optional)
+// argv[4] : offset (optional, default = 0)
+// argv[5] : number of colorings to use
 
 void atmostk (int *array, int size, int bound, int start) {
   // initilize the top right
@@ -93,7 +95,12 @@ int main (int argc, char** argv) {
   fclose (graph);
 
   int offset = 0;
-  if (argc > 4) offset = atoi (argv[4]);
+  int numColorings = 1;
+  if (argc > 4)
+  {
+    offset = atoi (argv[4]);
+    numColorings = atoi (argv[5]);
+  }
 
   int nVar = nVertex;
 
@@ -101,7 +108,8 @@ int main (int argc, char** argv) {
 
   if (argc > 3) {
 #ifdef SINZ
-    if (offset) nVar += nColor * (offset+2);
+    int numSinzVarsPerColoring = (nColor * (offset+2));
+    if (offset) nVar += (numSinzVarsPerColoring * numColorings);
 #endif
 #ifdef DIRECT
     if (offset) nVar += nColor;
@@ -115,8 +123,11 @@ int main (int argc, char** argv) {
 
   if (argc > 3) {
 #ifdef SINZ
+    int numSinzClsPerColoring = (2*offset + 2) * (nColor - 1) + 2;
     if (offset > 0)
-      nCls += (2*offset + 2) * (nColor - 1) + 2;
+    {
+      nCls += (numSinzClsPerColoring * numColorings);
+    }
 #endif
 #ifdef DIRECT
     if (offset > 0) {
@@ -151,39 +162,52 @@ int main (int argc, char** argv) {
   }
 
   if (argc > 3) {
-    int *in  = (int *) malloc (sizeof (int) * nColor);
-    for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1;
+    struct dirent *de;
+    DIR *dr = opendir(argv[3]);
+    if (dr == NULL)
+    {
+      return 0;
+    }
+    else
+    {
+      while ((de = readdir(dr)) != NULL)
+      {
+        FILE *sol = fopen (de->d_name, "r");
+        int *in  = (int *) malloc (sizeof (int) * nColor);
+        for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1 + (nColor * (numColorings - 1));
 
-    int *color = (int*) malloc (sizeof(int) * nVertex);
-    for (int i = 0; i < nVertex; i++) color[i] = 0;
+        int *color = (int*) malloc (sizeof(int) * nVertex);
+        for (int i = 0; i < nVertex; i++) color[i] = 0;
 
-    FILE *sol = fopen (argv[3], "r");
-    int lit;
-    while (1) {
-      int tmp = fscanf (sol, " %i ", &lit);
-      if (tmp == 0 || tmp == EOF) break;
-      if (lit > 0)
-        color [(lit-1)/nColor] = ((lit - 1) % nColor) + 1; }
+        int lit;
+        while (1) {
+          int tmp = fscanf (sol, " %i ", &lit);
+          if (tmp == 0 || tmp == EOF) break;
+          if (lit > 0)
+            color [(lit-1)/nColor] = ((lit - 1) % nColor) + 1; }
 
-    fclose (sol);
+        fclose (sol);
 
-    for (int c = 1; c <= nColor; c++) {
-      if (offset) printf ("%i ", nVertex + c);
+        for (int c = 1; c <= nColor; c++) {
+          if (offset) printf ("%i ", nVertex + c + (nColor * (numColorings - 1)));
 #ifdef WCNF
-      printf ("%i ", nVertex * (nVertex - 1) / 2 - nEdge);
+          printf ("%i ", nVertex * (nVertex - 1) / 2 - nEdge);
 #endif
-      for (int i = 0; i < nVertex; i++)
-        if (color[i] == c) printf ("%i ", i + 1);
-      printf ("0\n"); }
+          for (int i = 0; i < nVertex; i++)
+            if (color[i] == c) printf ("%i ", i + 1);
+          printf ("0\n"); }
 
-    if (offset > 0) {
+        if (offset > 0) {
 #ifdef SINZ
-      atmostk (in, nColor, offset, nVertex + nColor);
+          atmostk (in, nColor, offset, nVertex + (nColor * (numColorings - 1)));
 #endif
 #ifdef DIRECT
-      int *out = (int *) malloc (sizeof (int) * nColor);
-      subsetrec (in, nColor, offset+1, 0, out, 0, -1);
+          int *out = (int *) malloc (sizeof (int) * nColor);
+          subsetrec (in, nColor, offset+1, 0, out, 0, -1);
 #endif
+        }
+      }
+      closedir(dr);
     }
   }
 }
