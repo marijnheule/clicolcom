@@ -14,8 +14,6 @@
 // argv[4] : offset (optional, default = 0)
 // argv[5] : number of colorings to use
 
-// adds (1 + size + 2*size*bound) clauses
-// = (1 + (1+2*offset) * nColor)
 void atmostk (int *array, int size, int bound, int start) {
   // initilize the top right
   printf("-%i 0\n", start + (bound + 1) * size);
