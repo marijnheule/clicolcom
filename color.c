@@ -74,9 +74,9 @@ int main (int argc, char** argv) {
 */
   int extra = 0;
   if (argc > 3 && size > clique)
-    extra = (active - clique) * (colors - 1);
+    extra = (size - clique) * (colors - 1);
 
-  int nCls = active + extra - clique;
+  int nCls = active + extra + clique * (colors - 1);
   for (int i = 0; i < nEdge; i++) {
     int a = edges[2*i  ];
     int b = edges[2*i+1];
@@ -87,7 +87,11 @@ int main (int argc, char** argv) {
   int* domain = (int*) malloc (sizeof (int) * (colors + 1));
   for (int i = 0; i < nVertex; i++)
     if (in[i]) {
-      if (!fixed[i]) { // TODO: also fix clique?
+      if ( fixed[i]) {
+        for (int j = 1; j <= colors; j++) {
+          if (j != fixed[i]) printf ("-");
+          printf ("%i 0\n", i * colors + j); } }
+      if (!fixed[i]) {
         for (int j = 1; j <= colors; j++)
           domain[j] = 1;
         for (int j = 0; j < nVertex; j++)
@@ -96,13 +100,13 @@ int main (int argc, char** argv) {
           if (domain[j]) printf ("%i ", i * colors + j);
         printf ("0\n"); } }
 
-  if (argc > 3 && size > clique)
-    for (int i = 0; i < nVertex; i++)
+  if (argc > 3 && size > clique) {
+    for (int i = clique; i < size; i++)
       if (in[i])
         for (int j = 2; j <= colors; j++) {
           for (int k = 0; k < i; k++)
             if (in[k]) printf ("%i ", verts[k] * colors + j - 1);
-          printf ("-%i 0\n", verts[i] * colors + j); }
+          printf ("-%i 0\n", verts[i] * colors + j); } }
 
   for (int i = 0; i < nEdge; i++) {
     int a = edges[2*i  ];
