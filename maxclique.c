@@ -14,6 +14,8 @@
 // argv[4] : offset (optional, default = 0)
 // argv[5] : number of colorings to use
 
+// adds (1 + size + 2*size*bound) clauses
+// = (1 + (1+2*offset) * nColor)
 void atmostk (int *array, int size, int bound, int start) {
   // initilize the top right
   printf("-%i 0\n", start + (bound + 1) * size);
@@ -106,24 +108,26 @@ int main (int argc, char** argv) {
 
   if (argc <= 3) nVar += nVertex * nColor;
 
+  int numSinzVarsPerColoring = (nColor * (offset+1));
+  int numAuxVarsPerColoring = nColor;
   if (argc > 3) {
 #ifdef SINZ
-    int numSinzVarsPerColoring = (nColor * (offset+2));
-    if (offset) nVar += (numSinzVarsPerColoring * numColorings);
+    if (offset) nVar += ((numSinzVarsPerColoring + numAuxVarsPerColoring) * numColorings);
 #endif
 #ifdef DIRECT
     if (offset) nVar += nColor;
 #endif
   }
 
-  int nCls = nVertex * (nVertex - 1) / 2 - nEdge + nColor;
+  int nCls = nVertex * (nVertex - 1) / 2 - nEdge + (nColor * numColorings);
   if (argc <= 3) {
     nCls += (2*nColor - 1) * (nVertex - 1) + 3 - nColor;
     if (nColor == 1) nCls--; }
 
+  int numSinzClsPerColoring = (2*offset + 2) * (nColor - 1) + 2;
   if (argc > 3) {
 #ifdef SINZ
-    int numSinzClsPerColoring = (2*offset + 2) * (nColor - 1) + 2;
+    // = (1 + (1+2*offset) * nColor)
     if (offset > 0)
     {
       nCls += (numSinzClsPerColoring * numColorings);
@@ -162,6 +166,7 @@ int main (int argc, char** argv) {
   }
 
   if (argc > 3) {
+    int coloringNum = 0;
     struct dirent *de;
     DIR *dr = opendir(argv[3]);
     if (dr == NULL)
@@ -177,6 +182,8 @@ int main (int argc, char** argv) {
           continue;
         }
 
+        coloringNum = coloringNum + 1;
+
         char* name_with_extension;
         name_with_extension = malloc(strlen(de->d_name) + 1 + strlen(argv[3]));
         strcpy(name_with_extension, argv[3]);
@@ -184,7 +191,7 @@ int main (int argc, char** argv) {
 
         FILE *sol = fopen (name_with_extension, "r");
         int *in  = (int *) malloc (sizeof (int) * nColor);
-        for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1 + (nColor * (numColorings - 1));
+        for (int i = 0; i < nColor; i++) in [i] = nVertex + i + 1 + (nColor * (coloringNum - 1));
 
         int *color = (int*) malloc (sizeof(int) * nVertex);
         for (int i = 0; i < nVertex; i++) color[i] = 0;
@@ -199,7 +206,7 @@ int main (int argc, char** argv) {
         fclose (sol);
 
         for (int c = 1; c <= nColor; c++) {
-          if (offset) printf ("%i ", nVertex + c + (nColor * (numColorings - 1)));
+          if (offset) printf ("%i ", nVertex + c + (nColor * (coloringNum - 1)));
 #ifdef WCNF
           printf ("%i ", nVertex * (nVertex - 1) / 2 - nEdge);
 #endif
@@ -209,7 +216,7 @@ int main (int argc, char** argv) {
 
         if (offset > 0) {
 #ifdef SINZ
-          atmostk (in, nColor, offset, nVertex + (nColor * numColorings));
+          atmostk (in, nColor, offset, nVertex + (nColor * numColorings) + (numSinzVarsPerColoring * (coloringNum - 1)));
 #endif
 #ifdef DIRECT
           int *out = (int *) malloc (sizeof (int) * nColor);

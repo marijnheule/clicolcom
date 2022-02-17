@@ -27,7 +27,7 @@ echo "c initial clique by cliquer: "$CL
 EXT=10
 echo -n "c "
 
-NUM_COLORINGS=1
+NUM_COLORINGS=2
 for i in $(eval echo "{$CL..300}")
 do
   RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
