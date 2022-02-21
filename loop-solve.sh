@@ -105,7 +105,7 @@ else
   for i in $(eval echo "{$MAX..200}")
   do
 #    ./color $GRAPH $i opt-$$.ord | ./cadical/build/cadical --forcephase=1 --phase=1
-    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
+    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
     if [ "$RESULT" = "$UNS" ]; then
       echo -n "U"
     elif [ "$RESULT" = "$SAT" ]; then

@@ -87,7 +87,7 @@ int main (int argc, char** argv) {
   int* domain = (int*) malloc (sizeof (int) * (colors + 1));
   for (int i = 0; i < nVertex; i++)
     if (in[i]) {
-      if ( fixed[i]) {
+      if (fixed[i]) {
         for (int j = 1; j <= colors; j++) {
           if (j != fixed[i]) printf ("-");
           printf ("%i 0\n", i * colors + j); } }
