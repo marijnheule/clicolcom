@@ -1,4 +1,4 @@
-all: color filter maxclique optimize-ord
+all: color filter maxclique optimize-ord inc-max-clique
 
 color: color.c
 	gcc color.c -O2 -o color
@@ -12,5 +12,8 @@ maxclique: maxclique.c
 optimize-ord: optimize-ord.c
 	gcc optimize-ord.c -O2 -o optimize-ord
 
+inc-max-clique: NewIncMaxCLQictai13.c
+	gcc -Wall NewIncMaxCLQictai13.c -O2 -o inc_max_clique
+
 clean:
-	rm color filter maxclique optimize-ord
+	rm color filter maxclique optimize-ord inc_max_clique

@@ -14,7 +14,8 @@ SAT="SATISFIABLE"
 UNS="UNSATISFIABLE"
 UNK="UNKNOWN"
 
-CL=`(timeout 1 ./cliquer/cl $GRAPH -r degree | grep max | tail -n 1 | tr ")" " " | awk '{print $3}')`
+#CL=`(timeout 1 ./cliquer/cl $GRAPH -r degree | grep max | tail -n 1 | tr ")" " " | awk '{print $3}')`
+CL=`(timeout 1 ./inc_max_clique $GRAPH 1 | tail -n 4 | grep 'Max Clique Size: ' | sed 's/Max Clique Size: //g')`
 if [ "$CL" == "" ]; then
   CL=1
 fi
