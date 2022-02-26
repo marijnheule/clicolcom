@@ -183,7 +183,8 @@ int main (int argc, char** argv) {
         coloringNum = coloringNum + 1;
 
         char* name_with_extension;
-        name_with_extension = malloc(strlen(de->d_name) + 1 + strlen(argv[3]));
+        //name_with_extension = malloc(strlen(de->d_name) + 1 + strlen(argv[3]));
+        name_with_extension = malloc(strlen(de->d_name) + strlen(argv[3]));
         strcpy(name_with_extension, argv[3]);
         strcat(name_with_extension, de->d_name);
 
@@ -200,8 +201,6 @@ int main (int argc, char** argv) {
           if (tmp == 0 || tmp == EOF) break;
           if (lit > 0)
             color [(lit-1)/nColor] = ((lit - 1) % nColor) + 1; }
-
-        fclose (sol);
 
         for (int c = 1; c <= nColor; c++) {
           if (offset) printf ("%i ", nVertex + c + (nColor * (coloringNum - 1)));
@@ -220,9 +219,10 @@ int main (int argc, char** argv) {
           int *out = (int *) malloc (sizeof (int) * nColor);
           subsetrec (in, nColor, offset+1, 0, out, 0, -1);
 #endif
+        //fclose (sol);
         }
       }
     }
-    closedir(dr);
+    //closedir(dr);
   }
 }
