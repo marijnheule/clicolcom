@@ -18,7 +18,7 @@ MAX=$UPPER
 for BOUND in $(eval echo "{$MAX..0}")
 do
   echo $BOUND
-  ./color $GRAPH $BOUND $LOWER | ubcsat -alg walksat -solve -cutoff $CUTOFF > walk-$$.txt
+  ./color $GRAPH $BOUND $LOWER | ./ubcsat/ubcsat -alg walksat -solve -cutoff $CUTOFF > walk-$$.txt
   if grep  " 1 1 " walk-$$.txt
   then
     MAX=$BOUND

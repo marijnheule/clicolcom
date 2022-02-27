@@ -100,7 +100,7 @@ time ./loop-solve.sh graphs/myciel6.col
 #time ./loop-solve.sh graphs/qg.order100.col #doable but expensive
 time ./loop-solve.sh graphs/qg.order30.col
 time ./loop-solve.sh graphs/qg.order40.col #doable but expensive
-#time ./loop-solve.sh graphs/qg.order60.col
+time ./loop-solve.sh graphs/qg.order60.col
 #./loop-solve.sh graphs/queen10_10.col
 #./loop-solve.sh graphs/queen11_11.col
 #./loop-solve.sh graphs/queen12_12.col
