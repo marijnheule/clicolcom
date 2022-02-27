@@ -95,12 +95,12 @@ time ./new-loop.sh graphs/mulsol.i.5.col
 time ./new-loop.sh graphs/myciel3.col
 time ./new-loop.sh graphs/myciel4.col
 time ./new-loop.sh graphs/myciel5.col
-#time ./new-loop.sh graphs/myciel6.col
+time ./new-loop.sh graphs/myciel6.col
 #./new-loop.sh graphs/myciel7.col
 #time ./new-loop.sh graphs/qg.order100.col #doable but expensive
 time ./new-loop.sh graphs/qg.order30.col
 time ./new-loop.sh graphs/qg.order40.col #doable but expensive
-#time ./new-loop.sh graphs/qg.order60.col
+time ./new-loop.sh graphs/qg.order60.col
 #./new-loop.sh graphs/queen10_10.col
 #./new-loop.sh graphs/queen11_11.col
 #./new-loop.sh graphs/queen12_12.col
