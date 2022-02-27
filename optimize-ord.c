@@ -36,7 +36,7 @@ int main (int argc, char** argv) {
   while (1) {
     int tmp = fscanf (order, " %i ", &v);
     if (tmp == 0 || tmp == EOF) break;
-    if (v < nVertex) {
+    if (v <= nVertex) {
       ord[c++] = v - 1;
       in[v-1] = 0; } }
 
