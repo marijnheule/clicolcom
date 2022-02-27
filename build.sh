@@ -8,3 +8,6 @@ cd ..
 cd ubcsat
 make
 cd ..
+cd DSATUR
+make
+cd ..

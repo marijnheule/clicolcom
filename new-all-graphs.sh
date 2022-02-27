@@ -41,7 +41,7 @@ time ./new-loop.sh graphs/DSJC125.1.col
 #./new-loop.sh graphs/DSJC500.5.col
 #./new-loop.sh graphs/DSJC500.9.col
 time ./new-loop.sh graphs/DSJR500.1.col
-#time ./new-loop.sh graphs/DSJR500.1c.col  ## doable but it takes a while
+time ./new-loop.sh graphs/DSJR500.1c.col  ## doable but it takes a while
 ###./new-loop.sh graphs/DSJR500.5.col   ## might be doable. yalsat with --eager gets down to 6 falsified clauses
 #time ./new-loop.sh graphs/abb313GPIA.col # depends on the seed
 time ./new-loop.sh graphs/anna.col

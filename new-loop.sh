@@ -54,43 +54,9 @@ then
   fi
 else
   rm tmp-clq-$$.txt
-  echo "c terminated with clique of size "$SIZE
-  BOUND=$(($SIZE+10))
-  ./color $GRAPH $BOUND tmp-$$.clq | ./ubcsat/ubcsat -alg ddfw -cutoff $DDFWLIM -seed $SEED -solve | ./strip.sh > tmp-$$.col
-  SIZE=$(($BOUND - $SIZE))
-  echo -n "c "
-  for i in $(eval echo "{$SIZE..0}")
-  do
-    RESULT=`./maxclique $GRAPH $BOUND tmp-$$.col $i | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
-    if [ "$RESULT" = "$SAT" ]; then
-        echo -n "S"
-    elif [ "$RESULT" = "$UNS" ]; then
-      i=$(($i+1))
-      SIZE=$(($BOUND-$i))
-      echo " found clique number: "$SIZE
-      ./maxclique $GRAPH $BOUND tmp-$$.col $i | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | ./strip.sh | head -n $SIZE > tmp-$$.clq
+  ./outer-loop.sh $GRAPH
+#  echo "c terminated with clique of size "$SIZE
 
-      # found max clique, find chromatic number
-      ./optimize-ord $GRAPH tmp-$$.clq > tmp-$$.ord
-      echo -n "c "
-      for i in $(eval echo "{$SIZE..200}")
-      do
-        RESULT=`./color $GRAPH $i tmp-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
-        if [ "$RESULT" = "$UNS" ]; then
-          echo -n "U"
-        elif [ "$RESULT" = "$SAT" ]; then
-        rm tmp-$$.ord
-        echo " found chromatic number: "$i
-        break
-      fi
-      done
-
-      break
-    else
-      echo ERROR
-    fi
-  done
-  rm tmp-$$.col
 
 fi
 
