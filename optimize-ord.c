@@ -51,7 +51,7 @@ int main (int argc, char** argv) {
       in[i] = 0; } }
 
   int *mask = (int*) malloc (sizeof(int) * (nVertex));
-  for (int i = 0; i <= nVertex; i++) mask[i] = 0;
+  for (int i = 0; i < nVertex; i++) mask[i] = 0;
 
   int clique = 0;
   for (int i = 0; i < nVertex; i++) {

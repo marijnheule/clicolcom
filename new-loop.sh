@@ -9,6 +9,7 @@ SAT="SATISFIABLE"
 UNS="UNSATISFIABLE"
 UNK="UNKNOWN"
 
+#start=`date +%s`
 echo $GRAPH
 timeout 1 ./inc_max_clique $GRAPH > tmp-clq-$$.txt
 cat tmp-clq-$$.txt | grep "Clique Output:" | tail -n 1 | sed 's|Clique Output: ||' | tr " " "\n" > tmp-$$.clq
@@ -60,4 +61,7 @@ else
 
 fi
 
+#end=`date +%s`
+#runtime=$((end-start))
+#echo "time: $runtime"
 rm tmp-$$.clq
