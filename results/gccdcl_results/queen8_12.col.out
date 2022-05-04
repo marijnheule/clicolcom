@@ -1,0 +1,44 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen8_12.col
+[options] Instance file = graphs/queen8_12.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 96,  #edges = 1368,  density = 30% at 0.001027
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 17  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 12  | ub = 17  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 12  | ub = 13  | clq = 0   | iter = 0   | core = 0   | time = 0.0031   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0041
+[modeling] preprocessed graph: #vertices = 96,  #edges = 1368,  density = 30.0000%
+#vertices = 96,  #edges = 1368,  density = 30.0000%
+[data] lb = 12  | ub = 12  | clq = 7   | iter = 0   | core = 0   | time = 0.0105   | conflicts = 131     | moves = 0         | memory = 0       
+[solution] 12-coloring computed at 0.0115
+
+OPTIMUM 12
+Boolean variables     : 3288
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 3
+conflicts             : 131            (11360 /sec)
+decisions             : 546            (0.00 % random) (47347 /sec)
+propagations          : 30816          (2672216 /sec)
+conflict literals     : 6619           (0.05 % deleted)
+CPU time              : 0.011532 s
+

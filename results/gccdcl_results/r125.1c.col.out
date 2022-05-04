@@ -1,0 +1,46 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/r125.1c.col
+[options] Instance file = graphs/r125.1c.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 125,  #edges = 7501,  density = 96.7871% at 0.002864
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 48  | clq = 0   | iter = 0   | core = 0   | time = 0.0003   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 43  | ub = 48  | clq = 0   | iter = 0   | core = 0   | time = 0.0025   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 44  | ub = 48  | clq = 0   | iter = 0   | core = 0   | time = 0.0091   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 45  | ub = 48  | clq = 0   | iter = 0   | core = 0   | time = 0.0223   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 46  | ub = 48  | clq = 0   | iter = 0   | core = 0   | time = 0.1604   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 46  | ub = 46  | clq = 0   | iter = 0   | core = 0   | time = 0.3682   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.3710
+[modeling] preprocessed graph: #vertices = 125,  #edges = 7501,  density = 96.7871%
+#vertices = 0,  #edges = 0,  density = 100.0000%
+[solution] 46-coloring computed at 0.3710
+
+OPTIMUM 46
+Boolean variables     : 0
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 0
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              ( nan % random) (0 /sec)
+propagations          : 0              (0 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.371031 s
+

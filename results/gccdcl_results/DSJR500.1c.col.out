@@ -1,0 +1,37 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/DSJR500.1c.col
+[options] Instance file = graphs/DSJR500.1c.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 500,  #edges = 121275,  density = 97.2144% at 0.037307
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 0.0042   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 67  | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 0.0623   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 69  | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 0.2347   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 0.5858   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 71  | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 4.0815   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 73  | ub = 104 | clq = 0   | iter = 0   | core = 0   | time = 9.6602   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 73  | ub = 92  | clq = 0   | iter = 0   | core = 0   | time = 13.3827  | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 13.4200
+[modeling] preprocessed graph: #vertices = 500,  #edges = 121275,  density = 97.2144%
+[data] lb = 74  | ub = 92  | clq = 49  | iter = 0   | core = 0   | time = 13.3899  | conflicts = 0       | moves = 0         | memory = 0       
+#vertices = 500,  #edges = 121275,  density = 97.2144%
+[data] lb = 74  | ub = 88  | clq = 29  | iter = 0   | core = 0   | time = 13.4120  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 74  | ub = 87  | clq = 34  | iter = 0   | core = 0   | time = 19.1082  | conflicts = 4680    | moves = 0         | memory = 0       
+[data] lb = 74  | ub = 86  | clq = 34  | iter = 0   | core = 0   | time = 19.7812  | conflicts = 5142    | moves = 0         | memory = 0       

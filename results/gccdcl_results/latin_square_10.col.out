@@ -1,0 +1,36 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/latin_square_10.col
+[options] Instance file = graphs/latin_square_10.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 900,  #edges = 307350,  density = 75.9733% at 0.096134
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 201 | clq = 0   | iter = 0   | core = 0   | time = 0.0091   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 85  | ub = 201 | clq = 0   | iter = 0   | core = 0   | time = 0.0662   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 201 | clq = 0   | iter = 0   | core = 0   | time = 0.2351   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 127 | clq = 0   | iter = 0   | core = 0   | time = 6.8490   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 6.9451
+[modeling] preprocessed graph: #vertices = 900,  #edges = 307350,  density = 75.9733%
+#vertices = 900,  #edges = 307350,  density = 75.9733%
+[data] lb = 90  | ub = 124 | clq = 10  | iter = 0   | core = 0   | time = 7.0331   | conflicts = 34      | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 123 | clq = 10  | iter = 0   | core = 0   | time = 7.6710   | conflicts = 245     | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 122 | clq = 10  | iter = 0   | core = 0   | time = 8.3559   | conflicts = 617     | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 120 | clq = 10  | iter = 0   | core = 0   | time = 14.7641  | conflicts = 4446    | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 119 | clq = 10  | iter = 0   | core = 0   | time = 254.6442 | conflicts = 188328  | moves = 0         | memory = 0       
+[data] lb = 90  | ub = 118 | clq = 10  | iter = 0   | core = 0   | time = 549.7617 | conflicts = 401184  | moves = 0         | memory = 0       

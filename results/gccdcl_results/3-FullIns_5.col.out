@@ -1,0 +1,45 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/3-FullIns_5.col
+[options] Instance file = graphs/3-FullIns_5.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 2030,  #edges = 33751,  density = 1.63885% at 0.012171
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.0013   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.0015   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.0023   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 8   | clq = 0   | iter = 0   | core = 0   | time = 0.0146   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0268
+[modeling] preprocessed graph: #vertices = 2030,  #edges = 33751,  density = 1.6388%
+[data] lb = 8   | ub = 8   | clq = 1000| iter = 0   | core = 0   | time = 0.3181   | conflicts = 0       | moves = 0         | memory = 0       
+#vertices = 2030,  #edges = 33751,  density = 1.6388%
+[solution] 8-coloring computed at 0.3394
+
+OPTIMUM 8
+Boolean variables     : 2027714
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1
+conflicts             : 1              (3 /sec)
+decisions             : 1              (0.00 % random) (3 /sec)
+propagations          : 92             (271 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.339364 s
+

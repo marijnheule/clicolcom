@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/school1_nsh.col
+[options] Instance file = graphs/school1_nsh.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 352,  #edges = 14612,  density = 23.6532% at 0.005343
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 17  | clq = 0   | iter = 0   | core = 0   | time = 0.0006   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 14  | ub = 17  | clq = 0   | iter = 0   | core = 0   | time = 0.0015   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.3252
+[modeling] preprocessed graph: #vertices = 328,  #edges = 14519,  density = 27.0735%
+#vertices = 328,  #edges = 14519,  density = 27.0735%
+[data] lb = 14  | ub = 14  | clq = 35  | iter = 0   | core = 0   | time = 0.3375   | conflicts = 0       | moves = 0         | memory = 0       
+[solution] 14-coloring computed at 0.3429
+
+OPTIMUM 14
+Boolean variables     : 39437
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1
+conflicts             : 0              (0 /sec)
+decisions             : 643            (0.00 % random) (1875 /sec)
+propagations          : 39437          (115021 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.342869 s
+

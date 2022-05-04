@@ -1,0 +1,34 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/C4000.5.col
+[options] Instance file = graphs/C4000.5.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 4000,  #edges = 4000268,  density = 50.0159% at 1.40112
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 398 | clq = 0   | iter = 0   | core = 0   | time = 0.1573   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 14  | ub = 398 | clq = 0   | iter = 0   | core = 0   | time = 0.2042   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 15  | ub = 398 | clq = 0   | iter = 0   | core = 0   | time = 0.3457   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 16  | ub = 398 | clq = 0   | iter = 0   | core = 0   | time = 1.8305   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 16  | ub = 381 | clq = 0   | iter = 0   | core = 0   | time = 7.0142   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 8.4153
+[modeling] preprocessed graph: #vertices = 4000,  #edges = 4000268,  density = 50.0159%
+#vertices = 4000,  #edges = 4000268,  density = 50.0159%
+[data] lb = 16  | ub = 380 | clq = 384 | iter = 0   | core = 0   | time = 28.8305  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 16  | ub = 379 | clq = 383 | iter = 0   | core = 0   | time = 49.8466  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 16  | ub = 371 | clq = 383 | iter = 0   | core = 0   | time = 70.7103  | conflicts = 0       | moves = 0         | memory = 0       

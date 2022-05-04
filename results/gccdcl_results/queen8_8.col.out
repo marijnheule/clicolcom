@@ -1,0 +1,45 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen8_8.col
+[options] Instance file = graphs/queen8_8.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 64,  #edges = 728,  density = 36.1111% at 0.000827
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 14  | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 8   | ub = 14  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 8   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0017   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0025
+[modeling] preprocessed graph: #vertices = 64,  #edges = 728,  density = 36.1111%
+#vertices = 64,  #edges = 728,  density = 36.1111%
+[data] lb = 8   | ub = 9   | clq = 7   | iter = 0   | core = 0   | time = 0.1082   | conflicts = 4175    | moves = 0         | memory = 0       
+[data] lb = 9   | ub = 9   | clq = 7   | iter = 0   | core = 0   | time = 0.5002   | conflicts = 14327   | moves = 0         | memory = 0       
+[solution] 9-coloring computed at 0.5010
+
+OPTIMUM 9
+Boolean variables     : 1352
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 172
+conflicts             : 14328          (28596 /sec)
+decisions             : 20651          (0.00 % random) (41216 /sec)
+propagations          : 2434577        (4858970 /sec)
+conflict literals     : 457572         (8.14 % deleted)
+CPU time              : 0.501048 s
+

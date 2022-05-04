@@ -1,0 +1,45 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen6_6.col
+[options] Instance file = graphs/queen6_6.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 36,  #edges = 290,  density = 46.0317% at 0.000676
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 6   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 6   | ub = 8   | clq = 0   | iter = 0   | core = 0   | time = 0.0006   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0013
+[modeling] preprocessed graph: #vertices = 36,  #edges = 290,  density = 46.0317%
+#vertices = 36,  #edges = 290,  density = 46.0317%
+[data] lb = 6   | ub = 7   | clq = 5   | iter = 0   | core = 0   | time = 0.0047   | conflicts = 362     | moves = 0         | memory = 0       
+[data] lb = 7   | ub = 7   | clq = 5   | iter = 0   | core = 0   | time = 0.0057   | conflicts = 445     | moves = 0         | memory = 0       
+[solution] 7-coloring computed at 0.0064
+
+OPTIMUM 7
+Boolean variables     : 376
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 10
+conflicts             : 446            (69895 /sec)
+decisions             : 783            (0.00 % random) (122708 /sec)
+propagations          : 20283          (3178655 /sec)
+conflict literals     : 7633           (1.00 % deleted)
+CPU time              : 0.006381 s
+

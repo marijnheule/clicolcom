@@ -1,0 +1,46 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/ash958GPIA.col
+[options] Instance file = graphs/ash958GPIA.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 1916,  #edges = 12506,  density = 0.681686% at 0.005232
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0006   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0007   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 6   | clq = 0   | iter = 0   | core = 0   | time = 0.0079   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0131
+[modeling] preprocessed graph: #vertices = 1915,  #edges = 12505,  density = 0.6823%
+#vertices = 1915,  #edges = 12505,  density = 0.6823%
+[data] lb = 3   | ub = 5   | clq = 525 | iter = 0   | core = 0   | time = 2.0814   | conflicts = 16      | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 4   | clq = 655 | iter = 0   | core = 0   | time = 28.0007  | conflicts = 522     | moves = 0         | memory = 0       
+[data] lb = 4   | ub = 4   | clq = 658 | iter = 0   | core = 0   | time = 28.7150  | conflicts = 599     | moves = 0         | memory = 0       
+[solution] 4-coloring computed at 28.7203
+
+OPTIMUM 4
+Boolean variables     : 1822065
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 14
+conflicts             : 600            (21 /sec)
+decisions             : 26029          (0.03 % random) (906 /sec)
+propagations          : 20025772       (697269 /sec)
+conflict literals     : 6125           (0.13 % deleted)
+CPU time              : 28.7203 s
+

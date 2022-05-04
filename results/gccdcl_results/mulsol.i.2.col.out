@@ -1,0 +1,42 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/mulsol.i.2.col
+[options] Instance file = graphs/mulsol.i.2.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 188,  #edges = 3885,  density = 22.1015% at 0.00178
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 31  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 31  | ub = 31  | clq = 0   | iter = 0   | core = 0   | time = 0.0006   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0392
+[modeling] preprocessed graph: #vertices = 101,  #edges = 2157,  density = 42.7129%
+#vertices = 0,  #edges = 0,  density = 100.0000%
+[solution] 31-coloring computed at 0.0392
+
+OPTIMUM 31
+Boolean variables     : 0
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 0
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              ( nan % random) (0 /sec)
+propagations          : 0              (0 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.039172 s
+

@@ -1,0 +1,33 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/flat300_26_0.col
+[options] Instance file = graphs/flat300_26_0.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 300,  #edges = 21633,  density = 48.2341% at 0.011944
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 46  | clq = 0   | iter = 0   | core = 0   | time = 0.0013   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 10  | ub = 46  | clq = 0   | iter = 0   | core = 0   | time = 0.0036   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 46  | clq = 0   | iter = 0   | core = 0   | time = 0.0186   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 41  | clq = 0   | iter = 0   | core = 0   | time = 0.1813   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.1933
+[modeling] preprocessed graph: #vertices = 300,  #edges = 21633,  density = 48.2341%
+#vertices = 300,  #edges = 21633,  density = 48.2341%
+[data] lb = 11  | ub = 40  | clq = 38  | iter = 0   | core = 0   | time = 0.2235   | conflicts = 83      | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 39  | clq = 36  | iter = 0   | core = 0   | time = 4.9092   | conflicts = 21964   | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 38  | clq = 37  | iter = 0   | core = 0   | time = 71.0957  | conflicts = 321675  | moves = 0         | memory = 0       

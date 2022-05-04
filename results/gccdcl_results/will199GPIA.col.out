@@ -1,0 +1,44 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/will199GPIA.col
+[options] Instance file = graphs/will199GPIA.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 701,  #edges = 6772,  density = 2.76014% at 0.003661
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 9   | clq = 0   | iter = 0   | core = 0   | time = 0.0004   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 6   | ub = 9   | clq = 0   | iter = 0   | core = 0   | time = 0.0005   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 6   | ub = 7   | clq = 0   | iter = 0   | core = 0   | time = 0.0205   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0242
+[modeling] preprocessed graph: #vertices = 700,  #edges = 6770,  density = 2.7672%
+[data] lb = 7   | ub = 7   | clq = 200 | iter = 0   | core = 0   | time = 0.0517   | conflicts = 0       | moves = 0         | memory = 0       
+#vertices = 700,  #edges = 6770,  density = 2.7672%
+[solution] 7-coloring computed at 0.0563
+
+OPTIMUM 7
+Boolean variables     : 238580
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1
+conflicts             : 1              (18 /sec)
+decisions             : 1              (0.00 % random) (18 /sec)
+propagations          : 23             (409 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.056254 s
+

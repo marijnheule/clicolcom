@@ -1,0 +1,42 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/huck.col
+[options] Instance file = graphs/huck.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 74,  #edges = 301,  density = 11.144% at 0.000662
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0009
+[modeling] preprocessed graph: #vertices = 11,  #edges = 55,  density = 100.0000%
+#vertices = 0,  #edges = 0,  density = 100.0000%
+[solution] 11-coloring computed at 0.0009
+
+OPTIMUM 11
+Boolean variables     : 0
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 0
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              ( nan % random) (0 /sec)
+propagations          : 0              (0 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.000925 s
+

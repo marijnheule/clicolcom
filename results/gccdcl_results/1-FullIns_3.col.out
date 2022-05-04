@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/1-FullIns_3.col
+[options] Instance file = graphs/1-FullIns_3.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 30,  #edges = 100,  density = 22.9885% at 0.001298
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0015
+[modeling] preprocessed graph: #vertices = 30,  #edges = 100,  density = 22.9885%
+[data] lb = 4   | ub = 4   | clq = 18  | iter = 0   | core = 0   | time = 0.0004   | conflicts = 0       | moves = 0         | memory = 0       
+#vertices = 30,  #edges = 100,  density = 22.9885%
+[solution] 4-coloring computed at 0.0017
+
+OPTIMUM 4
+Boolean variables     : 365
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1
+conflicts             : 1              (574 /sec)
+decisions             : 1              (0.00 % random) (574 /sec)
+propagations          : 10             (5741 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.001742 s
+

@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/inithx.i.3.col
+[options] Instance file = graphs/inithx.i.3.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 621,  #edges = 13969,  density = 7.25625% at 0.004948
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 32  | clq = 0   | iter = 0   | core = 0   | time = 0.0005   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 31  | ub = 32  | clq = 0   | iter = 0   | core = 0   | time = 0.0021   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 31  | ub = 31  | clq = 0   | iter = 0   | core = 0   | time = 0.2047   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.2096
+[modeling] preprocessed graph: #vertices = 172,  #edges = 4176,  density = 28.3966%
+#vertices = 0,  #edges = 0,  density = 100.0000%
+[solution] 31-coloring computed at 0.2096
+
+OPTIMUM 31
+Boolean variables     : 0
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 0
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              ( nan % random) (0 /sec)
+propagations          : 0              (0 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.209634 s
+

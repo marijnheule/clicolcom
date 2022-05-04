@@ -1,0 +1,49 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/r250.1c.col
+[options] Instance file = graphs/r250.1c.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 250,  #edges = 30227,  density = 97.1149% at 0.010142
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 0.0011   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 57  | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 0.0130   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 58  | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 0.0978   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 60  | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 0.2444   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 62  | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 0.5439   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 64  | ub = 69  | clq = 0   | iter = 0   | core = 0   | time = 1.9168   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 64  | ub = 66  | clq = 0   | iter = 0   | core = 0   | time = 2.6941   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 2.7043
+[modeling] preprocessed graph: #vertices = 250,  #edges = 30227,  density = 97.1149%
+#vertices = 250,  #edges = 30227,  density = 97.1149%
+[data] lb = 64  | ub = 65  | clq = 16  | iter = 0   | core = 0   | time = 2.7006   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 64  | ub = 64  | clq = 16  | iter = 0   | core = 0   | time = 2.7090   | conflicts = 14      | moves = 0         | memory = 0       
+[solution] 64-coloring computed at 2.7191
+
+OPTIMUM 64
+Boolean variables     : 1148
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 2
+conflicts             : 14             (5 /sec)
+decisions             : 941            (0.32 % random) (346 /sec)
+propagations          : 2688           (989 /sec)
+conflict literals     : 280            (0.00 % deleted)
+CPU time              : 2.71914 s
+

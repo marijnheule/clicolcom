@@ -1,0 +1,47 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/le450_5a.col
+[options] Instance file = graphs/le450_5a.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 450,  #edges = 5714,  density = 5.65603% at 0.003319
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 12  | clq = 0   | iter = 0   | core = 0   | time = 0.0003   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 12  | clq = 0   | iter = 0   | core = 0   | time = 0.0006   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 9   | clq = 0   | iter = 0   | core = 0   | time = 0.0142   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0175
+[modeling] preprocessed graph: #vertices = 450,  #edges = 5714,  density = 5.6560%
+#vertices = 450,  #edges = 5714,  density = 5.6560%
+[data] lb = 5   | ub = 8   | clq = 137 | iter = 0   | core = 0   | time = 11.5400  | conflicts = 16161   | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 7   | clq = 142 | iter = 0   | core = 0   | time = 15.5601  | conflicts = 22629   | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 6   | clq = 155 | iter = 0   | core = 0   | time = 32.5301  | conflicts = 56069   | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 5   | clq = 158 | iter = 0   | core = 0   | time = 40.6064  | conflicts = 69198   | moves = 0         | memory = 0       
+[solution] 5-coloring computed at 40.6097
+
+OPTIMUM 5
+Boolean variables     : 95761
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 610
+conflicts             : 69198          (1704 /sec)
+decisions             : 218009         (0.00 % random) (5368 /sec)
+propagations          : 91353096       (2249536 /sec)
+conflict literals     : 4120033        (1.14 % deleted)
+CPU time              : 40.6097 s
+

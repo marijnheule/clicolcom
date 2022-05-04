@@ -1,0 +1,46 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen7_7.col
+[options] Instance file = graphs/queen7_7.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 49,  #edges = 476,  density = 40.4762% at 0.000723
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 12  | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 7   | ub = 12  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 7   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0010   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0018
+[modeling] preprocessed graph: #vertices = 49,  #edges = 476,  density = 40.4762%
+#vertices = 49,  #edges = 476,  density = 40.4762%
+[data] lb = 7   | ub = 9   | clq = 6   | iter = 0   | core = 0   | time = 0.0014   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 7   | ub = 8   | clq = 6   | iter = 0   | core = 0   | time = 0.0043   | conflicts = 183     | moves = 0         | memory = 0       
+[data] lb = 7   | ub = 7   | clq = 6   | iter = 0   | core = 0   | time = 0.0052   | conflicts = 230     | moves = 0         | memory = 0       
+[solution] 7-coloring computed at 0.0059
+
+OPTIMUM 7
+Boolean variables     : 749
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 8
+conflicts             : 230            (39029 /sec)
+decisions             : 665            (0.00 % random) (112846 /sec)
+propagations          : 16560          (2810114 /sec)
+conflict literals     : 5432           (0.31 % deleted)
+CPU time              : 0.005893 s
+

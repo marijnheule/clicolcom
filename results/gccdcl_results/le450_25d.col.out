@@ -1,0 +1,31 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/le450_25d.col
+[options] Instance file = graphs/le450_25d.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 450,  #edges = 17425,  density = 17.2482% at 0.006246
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 30  | clq = 0   | iter = 0   | core = 0   | time = 0.0007   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 25  | ub = 30  | clq = 0   | iter = 0   | core = 0   | time = 0.0014   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 25  | ub = 28  | clq = 0   | iter = 0   | core = 0   | time = 0.3013   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.3075
+[modeling] preprocessed graph: #vertices = 436,  #edges = 17178,  density = 18.1145%
+#vertices = 436,  #edges = 17178,  density = 18.1145%
+[data] lb = 25  | ub = 27  | clq = 64  | iter = 0   | core = 0   | time = 2.2851   | conflicts = 3472    | moves = 0         | memory = 0       
+[data] lb = 25  | ub = 26  | clq = 65  | iter = 0   | core = 0   | time = 373.8898 | conflicts = 692093  | moves = 0         | memory = 0       

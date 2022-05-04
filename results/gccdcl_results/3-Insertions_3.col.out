@@ -1,0 +1,44 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/3-Insertions_3.col
+[options] Instance file = graphs/3-Insertions_3.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 56,  #edges = 110,  density = 7.14286% at 0.000547
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 2   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0006
+[modeling] preprocessed graph: #vertices = 56,  #edges = 110,  density = 7.1429%
+#vertices = 56,  #edges = 110,  density = 7.1429%
+[data] lb = 3   | ub = 4   | clq = 19  | iter = 0   | core = 0   | time = 1.1404   | conflicts = 33234   | moves = 0         | memory = 0       
+[data] lb = 4   | ub = 4   | clq = 19  | iter = 0   | core = 0   | time = 1.3294   | conflicts = 37895   | moves = 0         | memory = 0       
+[solution] 4-coloring computed at 1.3299
+
+OPTIMUM 4
+Boolean variables     : 1486
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 317
+conflicts             : 37896          (28495 /sec)
+decisions             : 63804          (0.00 % random) (47975 /sec)
+propagations          : 7618700        (5728647 /sec)
+conflict literals     : 610406         (24.71 % deleted)
+CPU time              : 1.32993 s
+

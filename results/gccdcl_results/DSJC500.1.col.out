@@ -1,0 +1,30 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/DSJC500.1.col
+[options] Instance file = graphs/DSJC500.1.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 500,  #edges = 12458,  density = 9.98637% at 0.004862
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 19  | clq = 0   | iter = 0   | core = 0   | time = 0.0005   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 19  | clq = 0   | iter = 0   | core = 0   | time = 0.0009   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 16  | clq = 0   | iter = 0   | core = 0   | time = 0.0318   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0366
+[modeling] preprocessed graph: #vertices = 500,  #edges = 12458,  density = 9.9864%
+#vertices = 500,  #edges = 12458,  density = 9.9864%
+[data] lb = 5   | ub = 15  | clq = 110 | iter = 0   | core = 0   | time = 0.1043   | conflicts = 9       | moves = 0         | memory = 0       

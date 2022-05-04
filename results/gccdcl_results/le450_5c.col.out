@@ -1,0 +1,46 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/le450_5c.col
+[options] Instance file = graphs/le450_5c.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 450,  #edges = 9803,  density = 9.70354% at 0.003858
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0004   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 10  | clq = 0   | iter = 0   | core = 0   | time = 0.0007   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0303
+[modeling] preprocessed graph: #vertices = 450,  #edges = 9803,  density = 9.7035%
+#vertices = 450,  #edges = 9803,  density = 9.7035%
+[data] lb = 5   | ub = 9   | clq = 121 | iter = 0   | core = 0   | time = 0.1379   | conflicts = 89      | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 8   | clq = 122 | iter = 0   | core = 0   | time = 0.2215   | conflicts = 154     | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 6   | clq = 141 | iter = 0   | core = 0   | time = 0.8666   | conflicts = 1235    | moves = 0         | memory = 0       
+[data] lb = 5   | ub = 5   | clq = 145 | iter = 0   | core = 0   | time = 1.8911   | conflicts = 2121    | moves = 0         | memory = 0       
+[solution] 5-coloring computed at 1.8949
+
+OPTIMUM 5
+Boolean variables     : 91672
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 38
+conflicts             : 2121           (1119 /sec)
+decisions             : 12633          (0.02 % random) (6667 /sec)
+propagations          : 3912740        (2064841 /sec)
+conflict literals     : 88926          (0.55 % deleted)
+CPU time              : 1.89494 s
+

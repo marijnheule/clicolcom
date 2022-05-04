@@ -1,0 +1,30 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/abb313GPIA.col
+[options] Instance file = graphs/abb313GPIA.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 1557,  #edges = 53356,  density = 4.40469% at 0.018154
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 15  | clq = 0   | iter = 0   | core = 0   | time = 0.0018   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 8   | ub = 15  | clq = 0   | iter = 0   | core = 0   | time = 0.0027   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 8   | ub = 11  | clq = 0   | iter = 0   | core = 0   | time = 0.1896   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.2078
+[modeling] preprocessed graph: #vertices = 1552,  #edges = 53344,  density = 4.4321%
+#vertices = 1552,  #edges = 53344,  density = 4.4321%
+[data] lb = 8   | ub = 10  | clq = 256 | iter = 0   | core = 0   | time = 57.6725  | conflicts = 13051   | moves = 0         | memory = 0       

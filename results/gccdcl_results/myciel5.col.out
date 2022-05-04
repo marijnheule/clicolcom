@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/myciel5.col
+[options] Instance file = graphs/myciel5.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 47,  #edges = 236,  density = 21.8316% at 0.000576
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 6   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 2   | ub = 6   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0008
+[modeling] preprocessed graph: #vertices = 47,  #edges = 236,  density = 21.8316%
+[data] lb = 6   | ub = 6   | clq = 42  | iter = 0   | core = 0   | time = 0.0005   | conflicts = 0       | moves = 0         | memory = 0       
+#vertices = 47,  #edges = 236,  density = 21.8316%
+[solution] 6-coloring computed at 0.0011
+
+OPTIMUM 6
+Boolean variables     : 892
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1
+conflicts             : 1              (900 /sec)
+decisions             : 1              (0.00 % random) (900 /sec)
+propagations          : 17             (15302 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.001111 s
+

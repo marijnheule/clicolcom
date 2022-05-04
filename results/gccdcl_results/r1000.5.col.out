@@ -1,0 +1,35 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/r1000.5.col
+[options] Instance file = graphs/r1000.5.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 1000,  #edges = 238267,  density = 47.7011% at 0.07444
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 249 | clq = 0   | iter = 0   | core = 0   | time = 0.0092   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 232 | ub = 249 | clq = 0   | iter = 0   | core = 0   | time = 0.0371   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 249 | clq = 0   | iter = 0   | core = 0   | time = 22.7119  | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 58.8370
+[modeling] preprocessed graph: #vertices = 984,  #edges = 234901,  density = 48.5698%
+#vertices = 984,  #edges = 234901,  density = 48.5698%
+[data] lb = 233 | ub = 244 | clq = 12  | iter = 0   | core = 0   | time = 58.9334  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 242 | clq = 12  | iter = 0   | core = 0   | time = 59.0539  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 241 | clq = 13  | iter = 0   | core = 0   | time = 59.3547  | conflicts = 34      | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 240 | clq = 13  | iter = 0   | core = 0   | time = 63.3678  | conflicts = 1103    | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 239 | clq = 14  | iter = 0   | core = 0   | time = 91.9121  | conflicts = 10009   | moves = 0         | memory = 0       
+[data] lb = 233 | ub = 238 | clq = 16  | iter = 0   | core = 0   | time = 142.9560 | conflicts = 26694   | moves = 0         | memory = 0       

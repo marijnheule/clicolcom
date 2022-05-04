@@ -1,0 +1,30 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/wap06a.col
+[options] Instance file = graphs/wap06a.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 947,  #edges = 43571,  density = 9.72717% at 0.014691
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 45  | clq = 0   | iter = 0   | core = 0   | time = 0.0016   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 40  | ub = 45  | clq = 0   | iter = 0   | core = 0   | time = 0.0021   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 40  | ub = 44  | clq = 0   | iter = 0   | core = 0   | time = 0.9377   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.9524
+[modeling] preprocessed graph: #vertices = 787,  #edges = 38625,  density = 12.4882%
+#vertices = 787,  #edges = 38625,  density = 12.4882%
+[data] lb = 40  | ub = 43  | clq = 54  | iter = 0   | core = 0   | time = 295.1174 | conflicts = 374203  | moves = 0         | memory = 0       

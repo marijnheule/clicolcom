@@ -1,0 +1,40 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/C2000.9.col
+[options] Instance file = graphs/C2000.9.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 2000,  #edges = 1799532,  density = 90.0216% at 0.581649
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 0.0673   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 56  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 0.2321   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 60  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 0.7235   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 61  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 1.7422   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 63  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 3.9323   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 67  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 8.5426   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 68  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 17.9163  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 578 | clq = 0   | iter = 0   | core = 0   | time = 36.3799  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 560 | clq = 0   | iter = 0   | core = 0   | time = 48.6075  | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 49.1892
+[modeling] preprocessed graph: #vertices = 2000,  #edges = 1799532,  density = 90.0216%
+#vertices = 2000,  #edges = 1799532,  density = 90.0216%
+[data] lb = 70  | ub = 551 | clq = 78  | iter = 0   | core = 0   | time = 50.0197  | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 550 | clq = 79  | iter = 0   | core = 0   | time = 58.1829  | conflicts = 132     | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 549 | clq = 78  | iter = 0   | core = 0   | time = 125.4638 | conflicts = 1596    | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 547 | clq = 77  | iter = 0   | core = 0   | time = 313.2711 | conflicts = 6083    | moves = 0         | memory = 0       
+[data] lb = 70  | ub = 546 | clq = 77  | iter = 0   | core = 0   | time = 346.9042 | conflicts = 6707    | moves = 0         | memory = 0       

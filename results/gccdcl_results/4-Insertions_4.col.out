@@ -1,0 +1,28 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/4-Insertions_4.col
+[options] Instance file = graphs/4-Insertions_4.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 475,  #edges = 1795,  density = 1.59449% at 0.001175
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 5   | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 2   | ub = 5   | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0020
+[modeling] preprocessed graph: #vertices = 475,  #edges = 1795,  density = 1.5945%
+#vertices = 475,  #edges = 1795,  density = 1.5945%

@@ -1,0 +1,35 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/DSJC500.5.col
+[options] Instance file = graphs/DSJC500.5.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 500,  #edges = 62624,  density = 50.1996% at 0.020539
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 70  | clq = 0   | iter = 0   | core = 0   | time = 0.0024   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 11  | ub = 70  | clq = 0   | iter = 0   | core = 0   | time = 0.0070   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 12  | ub = 70  | clq = 0   | iter = 0   | core = 0   | time = 0.0205   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 13  | ub = 70  | clq = 0   | iter = 0   | core = 0   | time = 0.3117   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 13  | ub = 66  | clq = 0   | iter = 0   | core = 0   | time = 0.7107   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.7313
+[modeling] preprocessed graph: #vertices = 500,  #edges = 62624,  density = 50.1996%
+#vertices = 500,  #edges = 62624,  density = 50.1996%
+[data] lb = 13  | ub = 65  | clq = 61  | iter = 0   | core = 0   | time = 0.7640   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 13  | ub = 63  | clq = 61  | iter = 0   | core = 0   | time = 0.8043   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 13  | ub = 62  | clq = 59  | iter = 0   | core = 0   | time = 4.1367   | conflicts = 4167    | moves = 0         | memory = 0       
+[data] lb = 13  | ub = 61  | clq = 54  | iter = 0   | core = 0   | time = 361.0330 | conflicts = 605380  | moves = 0         | memory = 0       

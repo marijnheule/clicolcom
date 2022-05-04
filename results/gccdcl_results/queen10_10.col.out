@@ -1,0 +1,30 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen10_10.col
+[options] Instance file = graphs/queen10_10.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 100,  #edges = 1470,  density = 29.697% at 0.000993
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 18  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 10  | ub = 18  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 10  | ub = 13  | clq = 0   | iter = 0   | core = 0   | time = 0.0035   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0045
+[modeling] preprocessed graph: #vertices = 100,  #edges = 1470,  density = 29.6970%
+#vertices = 100,  #edges = 1470,  density = 29.6970%
+[data] lb = 10  | ub = 12  | clq = 8   | iter = 0   | core = 0   | time = 0.0109   | conflicts = 172     | moves = 0         | memory = 0       

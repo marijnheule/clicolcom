@@ -1,0 +1,47 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/queen9_9.col
+[options] Instance file = graphs/queen9_9.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 81,  #edges = 1056,  density = 32.5926% at 0.000952
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 14  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 9   | ub = 14  | clq = 0   | iter = 0   | core = 0   | time = 0.0001   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 9   | ub = 13  | clq = 0   | iter = 0   | core = 0   | time = 0.0025   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0034
+[modeling] preprocessed graph: #vertices = 81,  #edges = 1056,  density = 32.5926%
+#vertices = 81,  #edges = 1056,  density = 32.5926%
+[data] lb = 9   | ub = 12  | clq = 7   | iter = 0   | core = 0   | time = 0.0035   | conflicts = 7       | moves = 0         | memory = 0       
+[data] lb = 9   | ub = 11  | clq = 8   | iter = 0   | core = 0   | time = 0.0063   | conflicts = 97      | moves = 0         | memory = 0       
+[data] lb = 9   | ub = 10  | clq = 8   | iter = 0   | core = 0   | time = 3.6683   | conflicts = 72066   | moves = 0         | memory = 0       
+[data] lb = 10  | ub = 10  | clq = 8   | iter = 0   | core = 0   | time = 20.9889  | conflicts = 272713  | moves = 0         | memory = 0       
+[solution] 10-coloring computed at 20.9899
+
+OPTIMUM 10
+Boolean variables     : 2265
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 1838
+conflicts             : 272714         (12993 /sec)
+decisions             : 358282         (0.00 % random) (17069 /sec)
+propagations          : 78693112       (3749098 /sec)
+conflict literals     : 14104430       (16.09 % deleted)
+CPU time              : 20.9899 s
+

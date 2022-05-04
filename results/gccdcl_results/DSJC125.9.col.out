@@ -1,0 +1,38 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/DSJC125.9.col
+[options] Instance file = graphs/DSJC125.9.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 125,  #edges = 6961,  density = 89.8194% at 0.002756
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 52  | clq = 0   | iter = 0   | core = 0   | time = 0.0003   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 30  | ub = 52  | clq = 0   | iter = 0   | core = 0   | time = 0.0016   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 32  | ub = 52  | clq = 0   | iter = 0   | core = 0   | time = 0.0054   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 33  | ub = 52  | clq = 0   | iter = 0   | core = 0   | time = 0.0139   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 52  | clq = 0   | iter = 0   | core = 0   | time = 0.1865   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 51  | clq = 0   | iter = 0   | core = 0   | time = 0.2664   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.2691
+[modeling] preprocessed graph: #vertices = 125,  #edges = 6961,  density = 89.8194%
+#vertices = 125,  #edges = 6961,  density = 89.8194%
+[data] lb = 34  | ub = 50  | clq = 9   | iter = 0   | core = 0   | time = 0.2678   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 49  | clq = 9   | iter = 0   | core = 0   | time = 0.2712   | conflicts = 42      | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 48  | clq = 8   | iter = 0   | core = 0   | time = 0.3373   | conflicts = 1023    | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 47  | clq = 9   | iter = 0   | core = 0   | time = 0.5173   | conflicts = 3699    | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 46  | clq = 9   | iter = 0   | core = 0   | time = 20.7392  | conflicts = 244028  | moves = 0         | memory = 0       
+[data] lb = 34  | ub = 45  | clq = 9   | iter = 0   | core = 0   | time = 54.6526  | conflicts = 608021  | moves = 0         | memory = 0       

@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/mug100_1.col
+[options] Instance file = graphs/mug100_1.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 100,  #edges = 166,  density = 3.35354% at 0.000547
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 3   | ub = 4   | clq = 0   | iter = 0   | core = 0   | time = 0.0000   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.0007
+[modeling] preprocessed graph: #vertices = 100,  #edges = 166,  density = 3.3535%
+#vertices = 100,  #edges = 166,  density = 3.3535%
+[data] lb = 4   | ub = 4   | clq = 31  | iter = 0   | core = 0   | time = 0.0145   | conflicts = 187     | moves = 0         | memory = 0       
+[solution] 4-coloring computed at 0.0151
+
+OPTIMUM 4
+Boolean variables     : 4884
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 1
+restarts              : 5
+conflicts             : 188            (12468 /sec)
+decisions             : 897            (0.00 % random) (59487 /sec)
+propagations          : 52422          (3476490 /sec)
+conflict literals     : 597            (1.32 % deleted)
+CPU time              : 0.015079 s
+

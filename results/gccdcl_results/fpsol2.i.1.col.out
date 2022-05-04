@@ -1,0 +1,43 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/fpsol2.i.1.col
+[options] Instance file = graphs/fpsol2.i.1.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 496,  #edges = 11654,  density = 9.49332% at 0.004278
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 65  | clq = 0   | iter = 0   | core = 0   | time = 0.0004   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 59  | ub = 65  | clq = 0   | iter = 0   | core = 0   | time = 0.0011   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 65  | ub = 65  | clq = 0   | iter = 0   | core = 0   | time = 0.0075   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 0.2634
+[modeling] preprocessed graph: #vertices = 66,  #edges = 2144,  density = 99.9534%
+#vertices = 0,  #edges = 0,  density = 100.0000%
+[solution] 65-coloring computed at 0.2634
+
+OPTIMUM 65
+Boolean variables     : 0
+CSP variables         : 0
+Clauses               : 0
+Constraints           : 0
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              ( nan % random) (0 /sec)
+propagations          : 0              (0 /sec)
+conflict literals     : 0              ( nan % deleted)
+CPU time              : 0.263435 s
+

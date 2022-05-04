@@ -1,0 +1,42 @@
+[options] GC configuration
+[options] cmdline =  ./gc graphs/DSJC500.9.col
+[options] Instance file = graphs/DSJC500.9.col
+[options] Clause learning = 1
+[options] Polarity policy = 0
+[options] Clique ordering = 3
+[options]  ... low degree = 0
+[options] Color variables = absent
+[options] Bound policy    = 2
+[options] Adaptive bounds = 1
+[options] Preprocessing   = dense
+[options] IS constraints  = 0
+[options] fillin          = no
+[options] Triangle UP     = 0
+[options] Branching strat = Brelaz
+[options]  ... low degree = 0
+[options]  ... brelaz fst = 0
+[options]  ... phase save = 0
+[options] Strategy        = branch and bound
+
+[reading] #vertices = 500,  #edges = 112437,  density = 90.1299% at 0.034787
+[statistics] lb ub clq iter core time conflicts moves memory
+
+[data] lb = 0   | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 0.0041   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 42  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 0.0337   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 45  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 0.1234   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 47  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 0.3084   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 50  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 1.2915   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 51  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 3.0260   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 171 | clq = 0   | iter = 0   | core = 0   | time = 6.3760   | conflicts = 0       | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 165 | clq = 0   | iter = 0   | core = 0   | time = 8.5806   | conflicts = 0       | moves = 0         | memory = 0       
+[preprocessing] finished at 8.6154
+[modeling] preprocessed graph: #vertices = 500,  #edges = 112437,  density = 90.1299%
+#vertices = 500,  #edges = 112437,  density = 90.1299%
+[data] lb = 52  | ub = 164 | clq = 22  | iter = 0   | core = 0   | time = 8.6297   | conflicts = 29      | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 163 | clq = 24  | iter = 0   | core = 0   | time = 8.7139   | conflicts = 77      | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 162 | clq = 24  | iter = 0   | core = 0   | time = 8.7766   | conflicts = 109     | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 161 | clq = 23  | iter = 0   | core = 0   | time = 9.2049   | conflicts = 524     | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 160 | clq = 24  | iter = 0   | core = 0   | time = 9.4880   | conflicts = 721     | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 158 | clq = 23  | iter = 0   | core = 0   | time = 12.2982  | conflicts = 3415    | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 157 | clq = 23  | iter = 0   | core = 0   | time = 14.9549  | conflicts = 6029    | moves = 0         | memory = 0       
+[data] lb = 52  | ub = 156 | clq = 21  | iter = 0   | core = 0   | time = 188.8980 | conflicts = 186861  | moves = 0         | memory = 0       
