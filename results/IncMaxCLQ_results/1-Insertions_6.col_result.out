@@ -1,0 +1,8 @@
+Using the degeneracy ordering...
+instance information: #node=607, #edge=6337 density= 0.0345
+initial clique size: 2
+
+Max Clique Size: 2
+Clique Output: 607 606
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/1-Insertions_6.col 607 6337 0.0345 0 0 2 605 0

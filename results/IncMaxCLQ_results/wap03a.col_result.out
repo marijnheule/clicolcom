@@ -1,0 +1,8 @@
+Using the degeneracy ordering...
+instance information: #node=4730, #edge=286722 density= 0.0256
+initial clique size: 40
+
+Max Clique Size: 40
+Clique Output: 4342 3610 4133 4138 4152 3974 4207 4160 4159 4173 3689 3811 3600 3565 3283 3552 2998 644 2914 2667 2628 2468 2474 2210 2621 2630 2879 2625 2527 2298 2446 2290 2311 2287 2289 2309 2315 2531 893 897
+Program terminated in 3 seconds.
+NewIncMaxCLQ graphs/wap03a.col 4730 286722 0.0256 3 0 40 4590 0

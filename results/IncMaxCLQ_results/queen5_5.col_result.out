@@ -1,0 +1,8 @@
+Using the degeneracy ordering...
+instance information: #node=25, #edge=160 density= 0.5333
+initial clique size: 5
+
+Max Clique Size: 5
+Clique Output: 13 7 8 9 3
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/queen5_5.col 25 160 0.5333 0 0 5 18 0

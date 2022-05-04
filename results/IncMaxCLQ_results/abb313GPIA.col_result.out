@@ -1,0 +1,14 @@
+Using the degeneracy ordering...
+instance information: #node=1557, #edge=53356 density= 0.0440
+initial clique size: 6
+
+Current MaxClique Size=7 0
+Max Clique Size: 7
+Clique Output: 648 748 749 765 762 778 779
+Current MaxClique Size=8 0
+Max Clique Size: 8
+Clique Output: 647 648 748 749 765 762 778 779
+Max Clique Size: 8
+Clique Output: 647 648 748 749 765 762 778 779
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/abb313GPIA.col 1557 53356 0.0440 0 0 8 1496 0

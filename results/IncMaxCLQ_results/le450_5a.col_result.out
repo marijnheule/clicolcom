@@ -1,0 +1,11 @@
+Using the degeneracy ordering...
+instance information: #node=450, #edge=5714 density= 0.0566
+initial clique size: 4
+
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 110 126 319 393 407
+Max Clique Size: 5
+Clique Output: 110 126 319 393 407
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/le450_5a.col 450 5714 0.0566 0 0 5 428 0

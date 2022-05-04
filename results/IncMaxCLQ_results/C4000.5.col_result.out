@@ -1,0 +1,16 @@
+Using the degeneracy ordering...
+instance information: #node=4000, #edge=4000268 density= 0.5002
+initial clique size: 12
+
+Current MaxClique Size=13 0
+Max Clique Size: 13
+Clique Output: 911 2096 1848 2716 1138 695 520 1022 2025 3122 3327 3478 3963
+Current MaxClique Size=14 216
+Max Clique Size: 14
+Clique Output: 1577 2846 1161 3704 2208 2371 1157 695 1269 738 1493 520 2025 3900
+Current MaxClique Size=15 2279
+Max Clique Size: 15
+Clique Output: 3898 1577 1229 2846 1161 3704 179 2208 2371 695 1269 738 1493 2025 3900
+Current MaxClique Size=16 653873
+Max Clique Size: 16
+Clique Output: 1002 3848 2537 2081 2473 28 1793 2063 1575 859 1318 1161 2371 586 2839 2350

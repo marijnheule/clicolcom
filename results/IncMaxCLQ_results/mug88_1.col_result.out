@@ -1,0 +1,11 @@
+Using the degeneracy ordering...
+instance information: #node=88, #edge=146 density= 0.0381
+initial clique size: 2
+
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 86 87 88
+Max Clique Size: 3
+Clique Output: 86 87 88
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/mug88_1.col 88 146 0.0381 0 0 3 54 0

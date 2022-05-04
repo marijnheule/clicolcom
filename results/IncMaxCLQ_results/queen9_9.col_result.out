@@ -1,0 +1,20 @@
+Using the degeneracy ordering...
+instance information: #node=81, #edge=1056 density= 0.3259
+initial clique size: 5
+
+Current MaxClique Size=6 0
+Max Clique Size: 6
+Clique Output: 76 77 78 79 80 81
+Current MaxClique Size=7 0
+Max Clique Size: 7
+Clique Output: 75 76 77 78 79 80 81
+Current MaxClique Size=8 0
+Max Clique Size: 8
+Clique Output: 74 75 76 77 78 79 80 81
+Current MaxClique Size=9 0
+Max Clique Size: 9
+Clique Output: 73 74 75 76 77 78 79 80 81
+Max Clique Size: 9
+Clique Output: 73 74 75 76 77 78 79 80 81
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/queen9_9.col 81 1056 0.3259 0 0 9 91 0

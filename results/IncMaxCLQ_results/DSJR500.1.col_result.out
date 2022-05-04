@@ -1,0 +1,8 @@
+Using the degeneracy ordering...
+instance information: #node=500, #edge=3555 density= 0.0285
+initial clique size: 12
+
+Max Clique Size: 12
+Clique Output: 116 472 459 433 381 458 16 211 398 422 427 411
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/DSJR500.1.col 500 3555 0.0285 0 0 12 324 0

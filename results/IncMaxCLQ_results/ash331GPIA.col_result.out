@@ -1,0 +1,11 @@
+Using the degeneracy ordering...
+instance information: #node=662, #edge=4181 density= 0.0191
+initial clique size: 2
+
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 40 29 63
+Max Clique Size: 3
+Clique Output: 40 29 63
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/ash331GPIA.col 662 4181 0.0191 0 0 3 636 0

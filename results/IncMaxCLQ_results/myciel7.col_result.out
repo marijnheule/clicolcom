@@ -1,0 +1,8 @@
+Using the degeneracy ordering...
+instance information: #node=191, #edge=2360 density= 0.1301
+initial clique size: 2
+
+Max Clique Size: 2
+Clique Output: 191 190
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/myciel7.col 191 2360 0.1301 0 0 2 189 0

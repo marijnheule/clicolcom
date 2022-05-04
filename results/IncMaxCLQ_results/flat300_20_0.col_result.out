@@ -1,0 +1,17 @@
+Using the degeneracy ordering...
+instance information: #node=300, #edge=21375 density= 0.4766
+initial clique size: 8
+
+Current MaxClique Size=9 0
+Max Clique Size: 9
+Clique Output: 167 186 83 204 207 283 39 240 252
+Current MaxClique Size=10 0
+Max Clique Size: 10
+Clique Output: 94 113 188 205 60 40 226 8 223 289
+Current MaxClique Size=11 51
+Max Clique Size: 11
+Clique Output: 48 202 220 154 226 167 39 233 240 252 289
+Max Clique Size: 11
+Clique Output: 48 202 220 154 226 167 39 233 240 252 289
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/flat300_20_0.col 300 21375 0.4766 0 707 11 14583 1

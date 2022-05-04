@@ -1,0 +1,3278 @@
+Investigating the MaxIndSet ordering...
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 408 767 885 214 625
+Current MaxClique Size=6 2
+Max Clique Size: 6
+Clique Output: 793 184 805 672 145 76
+****1 iset size: 6, nb back: 2 #remaining nodes: 994
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 408 767 885 214 625
+Current MaxClique Size=6 17
+Max Clique Size: 6
+Clique Output: 501 52 54 319 704 175
+****2 iset size: 6, nb back: 17 #remaining nodes: 988
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 408 767 885 214 625
+Current MaxClique Size=6 78
+Max Clique Size: 6
+Clique Output: 321 762 181 150 456 129
+****3 iset size: 6, nb back: 78 #remaining nodes: 982
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 408 767 885 214 625
+****4 iset size: 5, nb back: 100 #remaining nodes: 977
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 912 69 961 6 637
+****5 iset size: 5, nb back: 95 #remaining nodes: 972
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 433 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 605 433 211 562
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 106 574 661 605 433
+****6 iset size: 5, nb back: 95 #remaining nodes: 967
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 565 227 697 557 887
+****7 iset size: 5, nb back: 92 #remaining nodes: 962
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 955 867 632 183 544
+****8 iset size: 5, nb back: 88 #remaining nodes: 957
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 417 615 229 926 216
+****9 iset size: 5, nb back: 85 #remaining nodes: 952
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 380 825 277 294 518
+****10 iset size: 5, nb back: 79 #remaining nodes: 947
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 562
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 211 562
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 211 562
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 747 398 773 382 562
+****11 iset size: 5, nb back: 83 #remaining nodes: 942
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 410 783 645 664 752
+****12 iset size: 5, nb back: 78 #remaining nodes: 937
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 840 351 64 624 610
+****13 iset size: 5, nb back: 68 #remaining nodes: 932
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 781 620 365 75 860
+****14 iset size: 5, nb back: 60 #remaining nodes: 927
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 627 842 964 997 883
+****15 iset size: 5, nb back: 54 #remaining nodes: 922
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 523 450 831 421 373
+****16 iset size: 5, nb back: 51 #remaining nodes: 917
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 108 302 485 222 546
+****17 iset size: 5, nb back: 50 #remaining nodes: 912
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 806 40 91 45 143
+****18 iset size: 5, nb back: 44 #remaining nodes: 907
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 702 689 468 454 668
+****19 iset size: 5, nb back: 40 #remaining nodes: 902
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 520 98 892 263 561
+****20 iset size: 5, nb back: 41 #remaining nodes: 897
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 459 169 449 68 363
+****21 iset size: 5, nb back: 31 #remaining nodes: 892
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 737 824 486 72 94
+****22 iset size: 5, nb back: 32 #remaining nodes: 887
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 593 872 493 293 368
+****23 iset size: 5, nb back: 29 #remaining nodes: 882
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 960 386 132 84 254
+****24 iset size: 5, nb back: 23 #remaining nodes: 877
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 111 234 560 789 323
+****25 iset size: 5, nb back: 20 #remaining nodes: 872
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 838 990 660 616 259
+****26 iset size: 5, nb back: 13 #remaining nodes: 867
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 598 327 434 299 225
+****27 iset size: 5, nb back: 14 #remaining nodes: 862
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 343 750 911 784 255
+****28 iset size: 5, nb back: 14 #remaining nodes: 857
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 63 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 540 759 528 21
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 60 812 147 21 63
+****29 iset size: 5, nb back: 10 #remaining nodes: 852
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 422 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 907 547 215 839 144
+****30 iset size: 5, nb back: 12 #remaining nodes: 847
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 908 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 422 908 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 601 869 38 769 908
+****31 iset size: 5, nb back: 11 #remaining nodes: 842
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 312 957 247 428 387
+****32 iset size: 5, nb back: 12 #remaining nodes: 837
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 282 212 324 404 391
+****33 iset size: 5, nb back: 11 #remaining nodes: 832
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 484 471 123 580 57
+****34 iset size: 5, nb back: 9 #remaining nodes: 827
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 157 242 685 734 297
+****35 iset size: 5, nb back: 7 #remaining nodes: 822
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 859 919 857 202 986
+****36 iset size: 5, nb back: 7 #remaining nodes: 817
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 698 587 217 193 345
+****37 iset size: 5, nb back: 6 #remaining nodes: 812
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 250 526 347 274 798
+****38 iset size: 5, nb back: 5 #remaining nodes: 807
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 352 898 139 165 956
+****39 iset size: 5, nb back: 4 #remaining nodes: 802
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 540 759 528
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 464 195 87 155 528
+****40 iset size: 5, nb back: 3 #remaining nodes: 797
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 90 759 48
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 390 939 540 759
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 95 827 411 979 759
+****41 iset size: 5, nb back: 0 #remaining nodes: 792
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 320 989 376 728 570
+****42 iset size: 5, nb back: 0 #remaining nodes: 787
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 494 568 166 529 654
+****43 iset size: 5, nb back: 0 #remaining nodes: 782
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 790 258 429 578 48
+****44 iset size: 5, nb back: 1 #remaining nodes: 777
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 918 140 808 740 185
+****45 iset size: 5, nb back: 1 #remaining nodes: 772
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 538 125 67 935 845
+****46 iset size: 5, nb back: 1 #remaining nodes: 767
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 835 304 690 666 445
+****47 iset size: 5, nb back: 1 #remaining nodes: 762
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 3
+Max Clique Size: 5
+Clique Output: 807 31 440 310 18
+****48 iset size: 5, nb back: 3 #remaining nodes: 757
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 390 939 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 372 42 909 390
+Current MaxClique Size=5 2
+Max Clique Size: 5
+Clique Output: 670 191 803 430 390
+****49 iset size: 5, nb back: 2 #remaining nodes: 752
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 288 532 374 651 371
+****50 iset size: 5, nb back: 1 #remaining nodes: 747
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 609 834 432 62 639
+****51 iset size: 5, nb back: 1 #remaining nodes: 742
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 149 124 141 525 916
+****52 iset size: 5, nb back: 1 #remaining nodes: 737
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 854 679 135 180 65
+****53 iset size: 5, nb back: 1 #remaining nodes: 732
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 813 235 438 477 322
+****54 iset size: 5, nb back: 1 #remaining nodes: 727
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 760 962 283 49 309
+****55 iset size: 5, nb back: 1 #remaining nodes: 722
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 927 392 43 987 669
+****56 iset size: 5, nb back: 1 #remaining nodes: 717
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 735 353 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 555 978 630 436 735
+****57 iset size: 5, nb back: 1 #remaining nodes: 712
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 870 378 914 721 461
+****58 iset size: 5, nb back: 1 #remaining nodes: 707
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 542 976 614 19 635
+****59 iset size: 5, nb back: 1 #remaining nodes: 702
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 589 503 833 536 905
+****60 iset size: 5, nb back: 0 #remaining nodes: 697
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 97 441 355 514 851
+****61 iset size: 5, nb back: 0 #remaining nodes: 692
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 579 61 822 733 971
+****62 iset size: 5, nb back: 0 #remaining nodes: 687
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 444 220 985 954 42
+****63 iset size: 5, nb back: 0 #remaining nodes: 682
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 16 826 344 426 269
+****64 iset size: 5, nb back: 1 #remaining nodes: 677
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 712 350 998 270 771
+****65 iset size: 5, nb back: 0 #remaining nodes: 672
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 306 346 718 13 2
+****66 iset size: 5, nb back: 1 #remaining nodes: 667
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 738 55 649 207 291
+****67 iset size: 5, nb back: 1 #remaining nodes: 662
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 286 204 168 478 58
+****68 iset size: 5, nb back: 1 #remaining nodes: 657
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 251 786 801 524 537
+****69 iset size: 5, nb back: 1 #remaining nodes: 652
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 928 151 101 853 810
+****70 iset size: 5, nb back: 1 #remaining nodes: 647
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 572 197 39 119 939
+****71 iset size: 5, nb back: 1 #remaining nodes: 642
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 1
+Max Clique Size: 5
+Clique Output: 179 442 797 993 764
+****72 iset size: 5, nb back: 1 #remaining nodes: 637
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 5
+Max Clique Size: 5
+Clique Output: 930 70 414 631 996
+****73 iset size: 5, nb back: 5 #remaining nodes: 632
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 6
+Max Clique Size: 5
+Clique Output: 492 763 742 603 245
+****74 iset size: 5, nb back: 6 #remaining nodes: 627
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 6
+Max Clique Size: 5
+Clique Output: 318 865 176 874 205
+****75 iset size: 5, nb back: 6 #remaining nodes: 622
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 211
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 983 211
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 513 422 211
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 6
+Max Clique Size: 5
+Clique Output: 895 226 158 333 211
+****76 iset size: 5, nb back: 6 #remaining nodes: 617
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 5
+Max Clique Size: 5
+Clique Output: 159 358 674 240 530
+****77 iset size: 5, nb back: 5 #remaining nodes: 612
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 5
+Max Clique Size: 5
+Clique Output: 462 686 667 717 879
+****78 iset size: 5, nb back: 5 #remaining nodes: 607
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 6
+Max Clique Size: 5
+Clique Output: 32 448 915 305 517
+****79 iset size: 5, nb back: 6 #remaining nodes: 602
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 5
+Max Clique Size: 5
+Clique Output: 775 384 921 290 189
+****80 iset size: 5, nb back: 5 #remaining nodes: 597
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 4
+Max Clique Size: 5
+Clique Output: 581 522 566 659 967
+****81 iset size: 5, nb back: 4 #remaining nodes: 592
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 3
+Max Clique Size: 5
+Clique Output: 490 608 952 24 980
+****82 iset size: 5, nb back: 3 #remaining nodes: 587
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 2
+Max Clique Size: 5
+Clique Output: 190 552 594 889 152
+****83 iset size: 5, nb back: 2 #remaining nodes: 582
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 2
+Max Clique Size: 5
+Clique Output: 406 527 112 700 981
+****84 iset size: 5, nb back: 2 #remaining nodes: 577
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 4
+Max Clique Size: 5
+Clique Output: 792 446 420 388 599
+****85 iset size: 5, nb back: 4 #remaining nodes: 572
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 983
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 983
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 4
+Max Clique Size: 5
+Clique Output: 413 107 20 465 983
+****86 iset size: 5, nb back: 4 #remaining nodes: 567
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 540
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+Current MaxClique Size=5 3
+Max Clique Size: 5
+Clique Output: 508 626 360 515 236
+****87 iset size: 5, nb back: 3 #remaining nodes: 562
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 540
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 947 71 472 619
+****88 iset size: 4, nb back: 3 #remaining nodes: 558
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 634 540
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 117 634 540
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 584 117 634 540
+****89 iset size: 4, nb back: 3 #remaining nodes: 554
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 693 754 11 394
+****90 iset size: 4, nb back: 4 #remaining nodes: 550
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 12 367 777 228
+****91 iset size: 4, nb back: 3 #remaining nodes: 546
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 709 756 722 90
+****92 iset size: 4, nb back: 1 #remaining nodes: 542
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 940 841 963 364
+****93 iset size: 4, nb back: 0 #remaining nodes: 538
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 880 596 678 178
+****94 iset size: 4, nb back: 0 #remaining nodes: 534
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 804 284 264 577
+****95 iset size: 4, nb back: 0 #remaining nodes: 530
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 396 354 729 648
+****96 iset size: 4, nb back: 0 #remaining nodes: 526
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 550 481 453 187
+****97 iset size: 4, nb back: 0 #remaining nodes: 522
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 513 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 325 513 422
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 307 681 706 513
+****98 iset size: 4, nb back: 0 #remaining nodes: 518
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 497 925 130
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 329 315 34 695
+****99 iset size: 4, nb back: 0 #remaining nodes: 514
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 497 925 130
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 765 688 592 563
+****100 iset size: 4, nb back: 0 #remaining nodes: 510
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 497 925 130
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 474 799 622 130
+****101 iset size: 4, nb back: 0 #remaining nodes: 506
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 7 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 534 377 480 7
+****102 iset size: 4, nb back: 0 #remaining nodes: 502
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 701 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 554 47 571 932
+****103 iset size: 4, nb back: 0 #remaining nodes: 498
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 701 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 499 548 83 856
+****104 iset size: 4, nb back: 0 #remaining nodes: 494
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 701 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 330 342 675 591
+****105 iset size: 4, nb back: 0 #remaining nodes: 490
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 701 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 655 711 393 913
+****106 iset size: 4, nb back: 0 #remaining nodes: 486
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 372 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 504 701 372
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 809 314 122 372
+****107 iset size: 4, nb back: 0 #remaining nodes: 482
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 26 476 504
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 96 466 875 172
+****108 iset size: 4, nb back: 0 #remaining nodes: 478
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 26 476 504
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 828 731 109 476
+****109 iset size: 4, nb back: 0 #remaining nodes: 474
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 576 746 174 266
+****110 iset size: 4, nb back: 0 #remaining nodes: 470
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 437 942 313 975
+****111 iset size: 4, nb back: 0 #remaining nodes: 466
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 646 253 613 633
+****112 iset size: 4, nb back: 0 #remaining nodes: 462
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 121 628 829 425
+****113 iset size: 4, nb back: 0 #remaining nodes: 458
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 894 966 917 361
+****114 iset size: 4, nb back: 0 #remaining nodes: 454
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 407 766 35 774
+****115 iset size: 4, nb back: 0 #remaining nodes: 450
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 832 248 142 424
+****116 iset size: 4, nb back: 0 #remaining nodes: 446
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 301 910 206 26
+****117 iset size: 4, nb back: 0 #remaining nodes: 442
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 405 80 303 676
+****118 iset size: 4, nb back: 1 #remaining nodes: 438
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 647 483 1 401
+****119 iset size: 4, nb back: 0 #remaining nodes: 434
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 970 416 744 819
+****120 iset size: 4, nb back: 0 #remaining nodes: 430
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 818 607 641 891
+****121 iset size: 4, nb back: 0 #remaining nodes: 426
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 535 300 972 44
+****122 iset size: 4, nb back: 0 #remaining nodes: 422
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 498 412 896 888
+****123 iset size: 4, nb back: 0 #remaining nodes: 418
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 933 209 338 663
+****124 iset size: 4, nb back: 0 #remaining nodes: 414
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 10 146 252 56
+****125 iset size: 4, nb back: 0 #remaining nodes: 410
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 684 415 779 292
+****126 iset size: 4, nb back: 0 #remaining nodes: 406
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 366 504 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 623 116 131 504
+****127 iset size: 4, nb back: 0 #remaining nodes: 402
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 656 99 23 658
+****128 iset size: 4, nb back: 0 #remaining nodes: 398
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 325 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 595 868 201 325
+****129 iset size: 4, nb back: 0 #remaining nodes: 394
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 265 271 244 496
+****130 iset size: 4, nb back: 0 #remaining nodes: 390
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 636 848 17 389
+****131 iset size: 4, nb back: 0 #remaining nodes: 386
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 958 814 710 938
+****132 iset size: 4, nb back: 0 #remaining nodes: 382
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 884 400 944 585
+****133 iset size: 4, nb back: 0 #remaining nodes: 378
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 800 82 51 46
+****134 iset size: 4, nb back: 0 #remaining nodes: 374
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 467 951 469 791
+****135 iset size: 4, nb back: 0 #remaining nodes: 370
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 643 163 88 714
+****136 iset size: 4, nb back: 0 #remaining nodes: 366
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 600 261 761 743
+****137 iset size: 4, nb back: 0 #remaining nodes: 362
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 553 161 968 336
+****138 iset size: 4, nb back: 0 #remaining nodes: 358
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 780 959 337 844
+****139 iset size: 4, nb back: 0 #remaining nodes: 354
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 196 505 699 276
+****140 iset size: 4, nb back: 0 #remaining nodes: 350
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 397 153 748 901
+****141 iset size: 4, nb back: 0 #remaining nodes: 346
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 275 203 984 836
+****142 iset size: 4, nb back: 0 #remaining nodes: 342
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 673 559 188
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 369 673 559 188
+****143 iset size: 4, nb back: 0 #remaining nodes: 338
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 871 662 715 443
+****144 iset size: 4, nb back: 0 #remaining nodes: 334
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 720 796 148 680
+****145 iset size: 4, nb back: 0 #remaining nodes: 330
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 995 941 682 694
+****146 iset size: 4, nb back: 0 #remaining nodes: 326
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 457 127 758 100
+****147 iset size: 4, nb back: 0 #remaining nodes: 322
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 78 137 473 41
+****148 iset size: 4, nb back: 0 #remaining nodes: 318
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 267 903 381 287
+****149 iset size: 4, nb back: 0 #remaining nodes: 314
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 134 723 278 541
+****150 iset size: 4, nb back: 0 #remaining nodes: 310
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 419 497 925
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 281 460 59 419
+****151 iset size: 4, nb back: 0 #remaining nodes: 306
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 256 239 223 820
+****152 iset size: 4, nb back: 0 #remaining nodes: 302
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 852 650 231 946
+****153 iset size: 4, nb back: 0 #remaining nodes: 298
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 945 815 232 89
+****154 iset size: 4, nb back: 0 #remaining nodes: 294
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 948 418 375 427
+****155 iset size: 4, nb back: 0 #remaining nodes: 290
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 519 341 331 713
+****156 iset size: 4, nb back: 0 #remaining nodes: 286
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 847 171 739 113
+****157 iset size: 4, nb back: 0 #remaining nodes: 282
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 823 114 162 602
+****158 iset size: 4, nb back: 0 #remaining nodes: 278
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 451 582 497
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 597 199 974 451
+****159 iset size: 4, nb back: 0 #remaining nodes: 274
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 160 716 904 81
+****160 iset size: 4, nb back: 0 #remaining nodes: 270
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 950 93 642 582
+****161 iset size: 4, nb back: 0 #remaining nodes: 266
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 289 862 924 583
+****162 iset size: 4, nb back: 0 #remaining nodes: 262
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 994 29 965 876
+****163 iset size: 4, nb back: 0 #remaining nodes: 258
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 936 772 409 588
+****164 iset size: 4, nb back: 0 #remaining nodes: 254
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 439 5 447 395
+****165 iset size: 4, nb back: 0 #remaining nodes: 250
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 929 273 753 707
+****166 iset size: 4, nb back: 0 #remaining nodes: 246
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 782 953 73 977
+****167 iset size: 4, nb back: 0 #remaining nodes: 242
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 221 511 925 551
+****168 iset size: 4, nb back: 0 #remaining nodes: 238
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 28 470 128 873
+****169 iset size: 4, nb back: 0 #remaining nodes: 234
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 821 279 479 611
+****170 iset size: 4, nb back: 0 #remaining nodes: 230
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 621 881 902 249
+****171 iset size: 4, nb back: 0 #remaining nodes: 226
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 569 846 549 677
+****172 iset size: 4, nb back: 0 #remaining nodes: 222
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 348 335 906 233
+****173 iset size: 4, nb back: 0 #remaining nodes: 218
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 357 556 22 886
+****174 iset size: 4, nb back: 0 #remaining nodes: 214
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 210 15 246 156
+****175 iset size: 4, nb back: 0 #remaining nodes: 210
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 53 491 103 9
+****176 iset size: 4, nb back: 0 #remaining nodes: 206
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 755 741 136 126
+****177 iset size: 4, nb back: 0 #remaining nodes: 202
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 334 691 899 920
+****178 iset size: 4, nb back: 0 #remaining nodes: 198
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 931 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 937 14 653 931
+****179 iset size: 4, nb back: 0 #remaining nodes: 194
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 326 495 260 497
+****180 iset size: 4, nb back: 0 #remaining nodes: 190
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 687 463 545 671
+****181 iset size: 4, nb back: 0 #remaining nodes: 186
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 218 104 353
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 102 218 104 353
+****182 iset size: 4, nb back: 0 #remaining nodes: 182
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 92 186 701
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 66 973 893 186
+****183 iset size: 4, nb back: 0 #remaining nodes: 178
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 362 564 8
+Current MaxClique Size=4 0
+Max Clique Size: 4
+Clique Output: 3 703 268 4
+****184 iset size: 4, nb back: 0 #remaining nodes: 174
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 362 564 8
+****185 iset size: 3, nb back: 0 #remaining nodes: 171
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 194 878 701
+****186 iset size: 3, nb back: 0 #remaining nodes: 168
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 311 366 909
+****187 iset size: 3, nb back: 0 #remaining nodes: 165
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 949 943 230
+****188 iset size: 3, nb back: 0 #remaining nodes: 162
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 923 567 219
+****189 iset size: 3, nb back: 0 #remaining nodes: 159
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 794 708 749
+****190 iset size: 3, nb back: 0 #remaining nodes: 156
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 778 864 27
+****191 iset size: 3, nb back: 0 #remaining nodes: 153
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 105 383 359
+****192 iset size: 3, nb back: 0 #remaining nodes: 150
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 543 877 349
+****193 iset size: 3, nb back: 0 #remaining nodes: 147
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 770 736 507
+****194 iset size: 3, nb back: 0 #remaining nodes: 144
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 629 726 776
+****195 iset size: 3, nb back: 0 #remaining nodes: 141
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 757 999 208
+****196 iset size: 3, nb back: 0 #remaining nodes: 138
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 475 170 606
+****197 iset size: 3, nb back: 0 #remaining nodes: 135
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 85 638 683
+****198 iset size: 3, nb back: 0 #remaining nodes: 132
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 575 500 243
+****199 iset size: 3, nb back: 0 #remaining nodes: 129
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 573 138 882
+****200 iset size: 3, nb back: 0 #remaining nodes: 126
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 332 262 732
+****201 iset size: 3, nb back: 0 #remaining nodes: 123
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 403 590 74
+****202 iset size: 3, nb back: 0 #remaining nodes: 120
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 768 488 77
+****203 iset size: 3, nb back: 0 #remaining nodes: 117
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 745 988 402
+****204 iset size: 3, nb back: 0 #remaining nodes: 114
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 788 167 295
+****205 iset size: 3, nb back: 0 #remaining nodes: 111
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 604 816 280
+****206 iset size: 3, nb back: 0 #remaining nodes: 108
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 340 890 118
+****207 iset size: 3, nb back: 0 #remaining nodes: 105
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 850 317 785
+****208 iset size: 3, nb back: 0 #remaining nodes: 102
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 30 665 92
+****209 iset size: 3, nb back: 0 #remaining nodes: 99
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 422
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 458 422
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 724 237 422
+****210 iset size: 3, nb back: 0 #remaining nodes: 96
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 502 795
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 296 356 657
+****211 iset size: 3, nb back: 0 #remaining nodes: 93
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 502 795
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 241 863 510
+****212 iset size: 3, nb back: 0 #remaining nodes: 90
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 502 795
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 811 692 802
+****213 iset size: 3, nb back: 0 #remaining nodes: 87
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 502 795
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 482 308 817
+****214 iset size: 3, nb back: 0 #remaining nodes: 84
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 502 795
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 399 435 795
+****215 iset size: 3, nb back: 0 #remaining nodes: 81
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 154 719
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 843 285 177
+****216 iset size: 3, nb back: 0 #remaining nodes: 78
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 154 719
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 272 192 489
+****217 iset size: 3, nb back: 0 #remaining nodes: 75
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 154 719
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 969 213 640
+****218 iset size: 3, nb back: 0 #remaining nodes: 72
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 154 719
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 922 900 154
+****219 iset size: 3, nb back: 0 #remaining nodes: 69
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 455 182 858
+****220 iset size: 3, nb back: 0 #remaining nodes: 66
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 516 1000 586
+****221 iset size: 3, nb back: 0 #remaining nodes: 63
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 164 531 558
+****222 iset size: 3, nb back: 0 #remaining nodes: 60
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 133 725 855
+****223 iset size: 3, nb back: 0 #remaining nodes: 57
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 506 385 257
+****224 iset size: 3, nb back: 0 #remaining nodes: 54
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 423 328 982
+****225 iset size: 3, nb back: 0 #remaining nodes: 51
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 115 502
+Current MaxClique Size=3 0
+Max Clique Size: 3
+Clique Output: 730 115 502
+****226 iset size: 3, nb back: 0 #remaining nodes: 48
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 198 719
+****227 iset size: 2, nb back: 0 #remaining nodes: 46
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 705 612
+****228 iset size: 2, nb back: 0 #remaining nodes: 44
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 618 224
+****229 iset size: 2, nb back: 0 #remaining nodes: 42
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 458
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 897 458
+****230 iset size: 2, nb back: 0 #remaining nodes: 40
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 521 379
+****231 iset size: 2, nb back: 0 #remaining nodes: 38
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 86 837
+****232 iset size: 2, nb back: 0 #remaining nodes: 36
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 238 370
+****233 iset size: 2, nb back: 0 #remaining nodes: 34
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 787 339
+****234 iset size: 2, nb back: 0 #remaining nodes: 32
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 644 727
+****235 iset size: 2, nb back: 0 #remaining nodes: 30
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 120 25
+****236 iset size: 2, nb back: 0 #remaining nodes: 28
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 37 36
+****237 iset size: 2, nb back: 0 #remaining nodes: 26
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 110 991
+****238 iset size: 2, nb back: 0 #remaining nodes: 24
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 849 79
+****239 iset size: 2, nb back: 0 #remaining nodes: 22
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 539
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 509 539
+****240 iset size: 2, nb back: 0 #remaining nodes: 20
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 861
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 50 200
+****241 iset size: 2, nb back: 0 #remaining nodes: 18
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 861
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 487 992
+****242 iset size: 2, nb back: 0 #remaining nodes: 16
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 861
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 298 533
+****243 iset size: 2, nb back: 0 #remaining nodes: 14
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 861
+Current MaxClique Size=2 0
+Max Clique Size: 2
+Clique Output: 431 861
+****244 iset size: 2, nb back: 0 #remaining nodes: 12
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 934
+****245 iset size: 1, nb back: 0 #remaining nodes: 11
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 512
+****246 iset size: 1, nb back: 0 #remaining nodes: 10
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 316
+****247 iset size: 1, nb back: 0 #remaining nodes: 9
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 652
+****248 iset size: 1, nb back: 0 #remaining nodes: 8
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 866
+****249 iset size: 1, nb back: 0 #remaining nodes: 7
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 33
+****250 iset size: 1, nb back: 0 #remaining nodes: 6
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 617
+****251 iset size: 1, nb back: 0 #remaining nodes: 5
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 173
+****252 iset size: 1, nb back: 0 #remaining nodes: 4
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 696
+****253 iset size: 1, nb back: 0 #remaining nodes: 3
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 452
+****254 iset size: 1, nb back: 0 #remaining nodes: 2
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 751
+****255 iset size: 1, nb back: 0 #remaining nodes: 1
+Current MaxClique Size=1 0
+Max Clique Size: 1
+Clique Output: 830
+****256 iset size: 1, nb back: 0 #remaining nodes: 0
+init nb isets 256
+
+the MaxIndSet ordering disable, using the degeneracy ordering...
+instance information: #node=1000, #edge=449449 density= 0.8998
+initial clique size: 53
+
+Current MaxClique Size=54 0
+Max Clique Size: 54
+Clique Output: 379 531 934 286 972 296 527 705 144 180 256 581 831 23 115 194 466 506 674 787 859 25 103 133 160 196 224 241 285 320 348 407 420 424 470 475 486 529 551 594 604 634 751 834 886 903 939 942 944 946 949 958 969 988
+Current MaxClique Size=55 2
+Max Clique Size: 55
+Clique Output: 625 379 531 934 286 972 296 527 705 144 180 256 581 831 23 115 194 466 506 674 787 859 25 103 133 160 196 224 241 285 320 348 407 420 424 470 475 486 529 551 594 604 634 751 834 886 903 939 942 944 946 949 958 969 988
+Current MaxClique Size=56 61381
+Max Clique Size: 56
+Clique Output: 199 815 427 168 225 943 3 618 262 378 549 720 252 531 596 707 110 159 431 972 705 717 873 927 256 335 581 97 115 194 466 506 787 871 25 103 133 183 196 241 285 420 424 475 486 543 551 594 634 849 858 886 939 942 944 988
+Current MaxClique Size=57 200996
+Max Clique Size: 57
+Clique Output: 623 961 677 680 199 815 5 730 427 277 943 200 298 701 764 156 531 707 114 159 972 927 66 144 581 23 97 466 506 787 103 133 196 224 241 420 424 452 475 543 551 594 604 608 634 652 858 886 897 903 939 942 944 946 962 969 988
+Current MaxClique Size=58 498197
+Max Clique Size: 58
+Clique Output: 154 399 455 759 5 589 696 277 3 102 126 298 701 758 163 301 625 720 156 508 753 487 527 30 66 335 610 23 115 506 674 739 787 103 133 196 224 241 316 320 420 424 475 529 543 558 604 608 627 634 849 897 942 944 946 953 958 962
