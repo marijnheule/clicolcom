@@ -1,0 +1,21 @@
+graphs/DSJR500.1c.col
+c initial clique has size 77
+91
+      1 1     0                52798                52798
+90
+      1 1     0                50225                50225
+89
+      1 1     0                55966                55966
+88
+      1 1     0               104654               104654
+87
+      1 1     0                70357                70357
+86
+      1 1     0               270888               270888
+85
+      1 1     0               970110               970110
+84
+85
+c SSSSSS found clique number: 83
+c UU found chromatic number: 85
+time: 123

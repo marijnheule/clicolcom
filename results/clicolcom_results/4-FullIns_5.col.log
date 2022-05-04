@@ -1,0 +1,9 @@
+graphs/4-FullIns_5.col
+c initial clique has size 0
+9
+      1 1     0                39295                39295
+8
+9
+c SSSSSS found clique number: 6
+c UUU found chromatic number: 9
+time: 2137

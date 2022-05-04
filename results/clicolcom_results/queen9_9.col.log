@@ -1,0 +1,4 @@
+graphs/queen9_9.col
+c found max clique of size 9
+c timeout, switching to local search
+      1 0     3              1646567            100000000

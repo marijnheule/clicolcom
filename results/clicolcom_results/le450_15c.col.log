@@ -1,0 +1,6 @@
+graphs/le450_15c.col
+c found max clique of size 15
+c timeout, switching to local search
+      1 1     0               256951               256951
+ c found chromatic number: 15
+time: 212

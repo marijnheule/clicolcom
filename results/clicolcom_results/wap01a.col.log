@@ -1,0 +1,6 @@
+graphs/wap01a.col
+c found max clique of size 41
+c timeout, switching to local search
+      1 1     0             17998949             17998949
+ c found chromatic number: 41
+time: 682
