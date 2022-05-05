@@ -1,0 +1,62 @@
+Using the degeneracy ordering...
+instance information: #node=450, #edge=17343 density= 0.1717
+initial clique size: 7
+
+Current MaxClique Size=8 0
+Max Clique Size: 8
+Clique Output: 263 267 274 356 365 372 391 446
+Current MaxClique Size=9 0
+Max Clique Size: 9
+Clique Output: 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=10 0
+Max Clique Size: 10
+Clique Output: 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=11 0
+Max Clique Size: 11
+Clique Output: 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=12 0
+Max Clique Size: 12
+Clique Output: 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=13 0
+Max Clique Size: 13
+Clique Output: 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=14 0
+Max Clique Size: 14
+Clique Output: 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=15 0
+Max Clique Size: 15
+Clique Output: 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=16 0
+Max Clique Size: 16
+Clique Output: 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=17 0
+Max Clique Size: 17
+Clique Output: 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=18 0
+Max Clique Size: 18
+Clique Output: 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=19 0
+Max Clique Size: 19
+Clique Output: 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=20 0
+Max Clique Size: 20
+Clique Output: 69 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=21 0
+Max Clique Size: 21
+Clique Output: 55 69 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=22 0
+Max Clique Size: 22
+Clique Output: 23 55 69 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=23 0
+Max Clique Size: 23
+Clique Output: 154 23 55 69 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=24 0
+Max Clique Size: 24
+Clique Output: 83 154 23 55 69 84 87 125 126 160 164 182 202 203 211 218 263 267 274 356 365 372 391 446
+Current MaxClique Size=25 0
+Max Clique Size: 25
+Clique Output: 158 401 265 435 50 362 314 193 94 436 209 331 428 17 380 46 232 266 63 104 327 424 47 348 295
+Max Clique Size: 25
+Clique Output: 158 401 265 435 50 362 314 193 94 436 209 331 428 17 380 46 232 266 63 104 327 424 47 348 295
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/le450_25c.col 450 17343 0.1717 0 0 25 674 0

@@ -1,0 +1,38 @@
+Using the degeneracy ordering...
+instance information: #node=128, #edge=3216 density= 0.3957
+initial clique size: 32
+
+Current MaxClique Size=33 0
+Max Clique Size: 33
+Clique Output: 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=34 0
+Max Clique Size: 34
+Clique Output: 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=35 0
+Max Clique Size: 35
+Clique Output: 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=36 0
+Max Clique Size: 36
+Clique Output: 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=37 0
+Max Clique Size: 37
+Clique Output: 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=38 0
+Max Clique Size: 38
+Clique Output: 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=39 0
+Max Clique Size: 39
+Clique Output: 20 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=40 0
+Max Clique Size: 40
+Clique Output: 10 20 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=41 0
+Max Clique Size: 41
+Clique Output: 8 10 20 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Current MaxClique Size=42 0
+Max Clique Size: 42
+Clique Output: 2 8 10 20 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Max Clique Size: 42
+Clique Output: 2 8 10 20 24 25 28 30 38 41 45 46 52 53 58 61 62 66 68 69 75 76 82 83 84 86 88 91 92 93 94 96 99 107 111 113 115 116 118 123 126 127
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/miles1000.col 128 3216 0.3957 0 0 42 453 0

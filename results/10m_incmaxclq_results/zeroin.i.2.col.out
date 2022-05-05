@@ -1,0 +1,14 @@
+Using the degeneracy ordering...
+instance information: #node=211, #edge=3541 density= 0.1598
+initial clique size: 28
+
+Current MaxClique Size=29 0
+Max Clique Size: 29
+Clique Output: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 36 41 43 45 51 54 61 125 190 191 192 193 198 199
+Current MaxClique Size=30 0
+Max Clique Size: 30
+Clique Output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 36 41 43 45 51 54 61 125 190 191 192 193 198 199
+Max Clique Size: 30
+Clique Output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 36 41 43 45 51 54 61 125 190 191 192 193 198 199
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/zeroin.i.2.col 211 3541 0.1598 0 0 30 184 0

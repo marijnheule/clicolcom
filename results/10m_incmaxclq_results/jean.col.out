@@ -1,0 +1,26 @@
+Using the degeneracy ordering...
+instance information: #node=80, #edge=254 density= 0.0804
+initial clique size: 4
+
+Current MaxClique Size=5 0
+Max Clique Size: 5
+Clique Output: 38 66 68 72 79
+Current MaxClique Size=6 0
+Max Clique Size: 6
+Clique Output: 34 38 66 68 72 79
+Current MaxClique Size=7 0
+Max Clique Size: 7
+Clique Output: 19 34 38 66 68 72 79
+Current MaxClique Size=8 0
+Max Clique Size: 8
+Clique Output: 15 19 34 38 66 68 72 79
+Current MaxClique Size=9 0
+Max Clique Size: 9
+Clique Output: 9 15 19 34 38 66 68 72 79
+Current MaxClique Size=10 0
+Max Clique Size: 10
+Clique Output: 7 9 15 19 34 38 66 68 72 79
+Max Clique Size: 10
+Clique Output: 7 9 15 19 34 38 66 68 72 79
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/jean.col 80 254 0.0804 0 0 10 85 0

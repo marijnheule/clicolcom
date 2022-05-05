@@ -1,0 +1,11 @@
+Using the degeneracy ordering...
+instance information: #node=186, #edge=3973 density= 0.2309
+initial clique size: 30
+
+Current MaxClique Size=31 0
+Max Clique Size: 31
+Clique Output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 49 50 51 52 53 54 61 63 65 66 67 70 143 144 145
+Max Clique Size: 31
+Clique Output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 49 50 51 52 53 54 61 63 65 66 67 70 143 144 145
+Program terminated in 0 seconds.
+NewIncMaxCLQ graphs/mulsol.i.5.col 186 3973 0.2309 0 0 31 170 0
