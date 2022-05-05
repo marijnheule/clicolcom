@@ -1,0 +1,85 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL Radically Simplified CDCL SAT Solver
+c Copyright (c) 2016-2021 A. Biere, M. Fleury, N. Froleyks
+c 
+c Version 1.5.2 9c38a080b32c28d805e8e6ca21849856b0cda605
+c g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0 -Wall -Wextra -O3 -DNDEBUG
+c Wed Feb 16 23:15:36 EST 2022 Linux fac-vanhoeve01 5.4.0-99-generic x86_64
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 600 seconds real time (due to '-t 600')
+c setting conflict limit to 1000000000 conflicts (due to '1000000000')
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from 'ddfwcnfs/queen5_5.col_5.cnf'
+c opening file to read 'ddfwcnfs/queen5_5.col_5.cnf'
+c found 'p cnf 125 545' header
+c parsed 545 clauses in 0.00 seconds process time
+c closing file 'ddfwcnfs/queen5_5.col_5.cnf'
+c after reading 5547 bytes 0.0 MB
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c all options are set to their default value
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant irredundant
+c         MB    restarts       trail    variables
+c          level   conflicts       glue     remaining
+c 
+c *  0.00  2  0 0   0    0    0  0% 0  520 100 80%
+c l  0.00  2  0 0   0    0    0  0% 0  520 100 80%
+c 1  0.00  2  0 0   0    0    0  0% 0  520 100 80%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+v -1 -2 -3 4 -5 6 -7 -8 -9 -10 -11 -12 -13 -14 15 -16 17 -18 -19 -20 -21 -22
+v 23 -24 -25 -26 -27 -28 -29 30 -31 32 -33 -34 -35 -36 -37 38 -39 -40 -41 -42
+v -43 44 -45 46 -47 -48 -49 -50 -51 -52 53 -54 -55 -56 -57 -58 59 -60 61 -62
+v -63 -64 -65 -66 -67 -68 -69 70 -71 72 -73 -74 -75 76 -77 -78 -79 -80 -81 -82
+v -83 -84 85 -86 87 -88 -89 -90 -91 -92 93 -94 -95 -96 -97 -98 99 -100 -101
+v 102 -103 -104 -105 -106 -107 108 -109 -110 -111 -112 -113 114 -115 116 -117
+v -118 -119 -120 -121 -122 -123 -124 125 0
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.00  147.83% parse
+c         0.00   24.06% search
+c         0.00   22.61% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.00   23.78% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c fixed:                        25        20.00 %  of all variables
+c lucky:                         1       100.00 %  of tried
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                      0         0.00 %  learned literals
+c minishrunken:                  0         0.00 %  learned literals
+c propagations:                 25         0.07 M  per second
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.00    seconds
+c total real time since initialization:            0.00    seconds
+c maximum resident set size of process:            1.86    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10

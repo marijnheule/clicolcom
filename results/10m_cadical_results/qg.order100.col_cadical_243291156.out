@@ -1,0 +1,130 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL Radically Simplified CDCL SAT Solver
+c Copyright (c) 2016-2021 A. Biere, M. Fleury, N. Froleyks
+c 
+c Version 1.5.2 9c38a080b32c28d805e8e6ca21849856b0cda605
+c g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0 -Wall -Wextra -O3 -DNDEBUG
+c Wed Feb 16 23:15:36 EST 2022 Linux fac-vanhoeve01 5.4.0-99-generic x86_64
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 600 seconds real time (due to '-t 600')
+c setting conflict limit to 1000000000 conflicts (due to '1000000000')
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from 'ddfwcnfs/qg.order100.col_100.cnf'
+c opening file to read 'ddfwcnfs/qg.order100.col_100.cnf'
+c found 'p cnf 1000000 97534900' header
+c parsed 97534900 clauses in 58.20 seconds process time
+c closing file 'ddfwcnfs/qg.order100.col_100.cnf'
+c after reading 1744410611 bytes 1663.6 MB
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c all options are set to their default value
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail         variables
+c            level   conflicts       glue            remaining
+c 
+c * 58.20 7773  0 0   0    0    0  0% 0 97524900 990000 99%
+c { 58.34 7777  0 0   0    0    0  0% 0 97524900 990000 99%
+c - 74.87 7777 99 1   0  300  135  3% 98 97524900 990000 99%
+c } 76.36 7777 101 1   0 1002  588  3% 98 97524900 990000 99%
+c [ 76.36 7777  0 1   0 1002  588  0% 0 97524900 990000 99%
+c O 76.39 7777 97 1   0 1003  589  3% 97 97524900 990000 99%
+c - 124.98 10014 105 2   1 2694 1614  3% 100 97524900 990000 99%
+c ] 125.20 10014 105 2   1 3002 1838  3% 100 97524900 990000 99%
+c { 125.20 10014 101 2   1 3002 1838  3% 98 97524900 990000 99%
+c F 125.22 10014 101 2   1 3004 1840  3% 98 97524900 990000 99%
+c # 195.86 9968 102 2   2 6007 3839  3% 99 97524900 990000 99%
+c - 230.53 9969 108 3   2 6285 2927  3% 99 97524900 990000 99%
+c } 230.69 9969 119 3   2 7002 3516  3% 99 97524900 990000 99%
+c [ 230.69 9969 105 3   2 7002 3516  3% 100 97524900 990000 99%
+c I 231.40 9969 114 3   4 10008 5740  3% 101 97524900 990000 99%
+c - 267.82 9970 3041 4   5 11073 4456  7% 107 97524900 990000 99%
+c s 297.05 9970 4983 4   6 13249 5974 12% 117 97524900 990000 99%
+c e 391.90 9970 4983 4   6 13249 3567 12% 117 96059700 980100 98%
+c s 394.04 9970 4983 4   6 13249 3544 12% 117 96059700 980100 98%
+c ^ 410.29 9970 4983 4   6 13249 3544 12% 117 96059700 980100 98%
+c 
+c  seconds       reductions   redundant     irredundant
+c           MB       restarts        trail           variables
+c              level     conflicts        glue             remaining
+c 
+c ] 411.21 9970 4842 4   7 15004 5024 14% 134 96059700 980100 98%
+c { 411.21 9970 119 4   7 15004 5024  3% 99 96059700 980100 98%
+c B 482.57 9970 156 4   7 15010 5030  3% 99 96059700 980100 98%
+c - 520.21 9926 705 5  31 17057 5018  3% 99 96059700 980100 98%
+c W 551.12 9926 481 5  31 21011 7652  3% 99 96059700 980100 98%
+c - 585.20 9926 390 6  31 24225 5857  3% 99 96059700 980100 98%
+c F 585.88 9926 326 6  31 28012 8392  3% 99 96059700 980100 98%
+c } 631.21 9926 312 6  31 30004 10175  3% 99 96059700 980100 98%
+c ? 631.21 9926 312 6  31 30004 10175  3% 99 96059700 980100 98%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+c UNKNOWN
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c       294.15   51.33% simplify
+c       278.86   48.67% search
+c       128.04   22.34% unstable
+c       121.46   21.20% stable
+c        98.31   17.16% ternary
+c        58.20   10.16% parse
+c        50.21    8.76% vivify
+c        29.81    5.20% subsume
+c        29.22    5.10% walk
+c        25.97    4.53% elim
+c         5.39    0.94% probe
+c         0.14    0.02% lucky
+c   =================================
+c       573.01   90.78% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:              6073        20.24 %  of conflicts
+c conflicts:                 30004        52.36    per second
+c decisions:                758788      1324.21    per second
+c eliminated:                 9900         0.99 %  of all variables
+c fixed:                     10000         1.00 %  of all variables
+c learned:                   29761        99.19 %  per conflict
+c learned_lits:            9248862       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                5755132        62.23 %  learned literals
+c minishrunken:              33813         0.37 %  learned literals
+c propagations:           23749014         0.04 M  per second
+c reduced:                    8262        27.54 %  per conflict
+c rephased:                      7      4286.29    interval
+c restarts:                     31       967.87    interval
+c stabilizing:                   2        33.34 %  of conflicts
+c subsumed:                   8917         0.00 %  of all clauses
+c strengthened:                 47         0.00 %  of all clauses
+c walked:                        1     30004.00    interval
+c weakened:                1465200         2.00    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:       631.21    seconds
+c total real time since initialization:          631.28    seconds
+c maximum resident set size of process:        12950.93    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 0

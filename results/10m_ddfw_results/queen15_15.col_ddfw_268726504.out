@@ -1,0 +1,70 @@
+# 
+# UBCSAT version 1.2-b18 BETA -- avoid using for published results
+# 
+# http://ubcsat.dtompkins.com
+# 
+# ubcsat -h for help
+# 
+#  -alg ddfw
+#  -runs 1 
+#  -cutoff 1000000000 
+#  -timeout 600 
+#  -gtimeout 0 
+#  -abstime 0
+#  -systime 0
+#  -timeres 1000 
+#  -noimprove 0 
+#  -earlysteps 0 
+#  -earlyqual 0 
+#  -earlywqual 0 
+#  -strikes 0 
+#  -target 0 
+#  -wtarget 0 
+#  -seed 268726504 
+#  -solve 1
+#  -find,-numsol 1 
+#  -findunique 0 
+#  -srestart 0 
+#  -prestart 0 
+#  -drestart 0 
+# 
+#  -pflat 0.15 
+#  -tl 0.99 
+#  -winit 8 
+# 
+# UBCSAT default output: 
+#    'ubcsat -r out null' to suppress, 'ubcsat -hc' for customization help
+# 
+# 
+# Output Columns: |run|found|best|beststep|steps|
+# 
+# run: Run Number
+# found: Target Solution Quality Found? (1 => yes)
+# best: Best (Lowest) # of False Clauses Found
+# beststep: Step of Best (Lowest) # of False Clauses Found
+# steps: Total Number of Search Steps
+# 
+#       F  Best                 Step                Total 
+#   Run N Sol'n                   of               Search 
+#   No. D Found                 Best                Steps 
+# 
+      1 0    13             18761125             73196177
+# No Solution found for -target 0
+
+
+Variables = 3375
+Clauses = 70260
+TotalLiterals = 142605
+TotalCPUTimeElapsed = 600.010   
+FlipsPerSecond = 121992 
+RunsExecuted = 1
+SuccessfulRuns = 0
+PercentSuccess = 0.00  
+Steps_Mean = 73196177
+Steps_CoeffVariance = 0
+Steps_Median = 73196177
+CPUTime_Mean = 600.01
+CPUTime_CoeffVariance = 0
+CPUTime_Median = 600.01
+
+
