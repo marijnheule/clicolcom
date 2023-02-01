@@ -33,6 +33,7 @@ do
     MAX=$(($i - 1))
     echo "* "$MAX
     ./maxclique $GRAPH $MAX | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+    cp $DIR/clique-$$.ord cliques/$BASE.clq
     ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
     cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
     rm $DIR/clique-$$.ord
@@ -69,6 +70,7 @@ do
         echo "* "$MAX
         j=$(($j + 1))
         ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+        cp $DIR/clique-$$.ord cliques/$BASE.clq
         ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
         cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
         rm $DIR/clique-$$.ord
@@ -88,7 +90,7 @@ do
 done
 #echo $MAX
 
-LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
+LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 -f | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
 #echo $MAX
 #wc opt-$$.ord
 if [ "$LEVEL" = "" ]; then
@@ -106,7 +108,7 @@ else
   for i in $(eval echo "{$MAX..200}")
   do
 #    ./color $GRAPH $i opt-$$.ord | ./cadical/build/cadical --forcephase=1 --phase=1
-    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
+    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 -f | grep SATIS | awk '{print $2}'`
     if [ "$RESULT" = "$UNS" ]; then
       echo -n "U"
     elif [ "$RESULT" = "$SAT" ]; then

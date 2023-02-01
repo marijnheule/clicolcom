@@ -88,7 +88,8 @@ int main (int argc, char** argv) {
     if (details)
       printf ("c vertex %i is connected to %i predecessors\n", ord[i] + 1, count);
 
-    printf ("%i\n", ord[i] + 1);
+    if (count)
+      printf ("%i\n", ord[i] + 1);
 
   }
   if (details)
