@@ -28,15 +28,15 @@ int main (int argc, char** argv) {
     for (int j = 0; j < nVertex; j++) adj[i][j] = 0; }
 
   int a, b;
-  int size = 0;
+  int eSize = 0;
   while (1) {
     int tmp = fscanf (graph, " e %i %i ", &a, &b);
     if (tmp == 0 || tmp == EOF) break;
     in[a-1] = 1; in[b-1] = 1;
     adj[a-1][b-1] = 1;
     adj[b-1][a-1] = 1;
-    edges[size++] = a - 1;
-    edges[size++] = b - 1; }
+    edges[eSize++] = a - 1;
+    edges[eSize++] = b - 1; }
 
   int active = 0;
   for (int i = 0; i < nVertex; i++)
@@ -46,7 +46,7 @@ int main (int argc, char** argv) {
 
   for (int i = 0; i < nVertex; i++) verts[i] = i;
 
-  size = 0;
+  int orderSize = 0;
   int clique = 0;
   int *fixed = (int*) malloc (sizeof(int) * nVertex);
   for (int i = 0; i < nVertex; i++) fixed[i] = 0;
@@ -57,7 +57,7 @@ int main (int argc, char** argv) {
       int tmp = fscanf (order, " %i ", &v);
       if (tmp == 0 || tmp == EOF) break;
       if (v > 0)
-        verts[size++] = v - 1; }
+        verts[orderSize++] = v - 1; }
 
     for (int i = 0; i < nVertex; i++) {
       int flag = 1;
@@ -73,8 +73,8 @@ int main (int argc, char** argv) {
     printf ("c %i %i\n", verts[i], fixed[verts[i]]);
 */
   int extra = 0;
-  if (argc > 3 && size > clique)
-    extra = (size - clique) * (colors - 1);
+  if (argc > 3 && orderSize > clique)
+    extra = (orderSize - clique) * (colors - 1);
 
   int nCls = active + extra + clique * (colors - 1);
   for (int i = 0; i < nEdge; i++) {
@@ -82,11 +82,12 @@ int main (int argc, char** argv) {
     int b = edges[2*i+1];
     if (!fixed[a] && !fixed[b]) nCls += colors; }
 
+//  printf ("c %i %i %i %i\n", active, clique * (colors-1), extra, active + extra + clique * (colors - 1));
   printf ("p cnf %i %i\n", nVertex * colors, nCls);
 
   int* domain = (int*) malloc (sizeof (int) * (colors + 1));
   for (int i = 0; i < nVertex; i++)
-    if (in[i]) {
+    if (in[i]) { // if the vertex is present
       if (fixed[i]) {
         for (int j = 1; j <= colors; j++) {
           if (j != fixed[i]) printf ("-");
@@ -100,14 +101,16 @@ int main (int argc, char** argv) {
           if (domain[j]) printf ("%i ", i * colors + j);
         printf ("0\n"); } }
 
-  if (argc > 3 && size > clique) {
-    for (int i = clique; i < size; i++)
-      if (in[i])
+  if (argc > 3 && orderSize > clique) {
+    for (int i = clique; i < orderSize; i++)
+//      if (in[i])
         for (int j = 2; j <= colors; j++) {
           for (int k = 0; k < i; k++)
-            if (in[k]) printf ("%i ", verts[k] * colors + j - 1);
+//            if (in[k])
+            printf ("%i ", verts[k] * colors + j - 1);
           printf ("-%i 0\n", verts[i] * colors + j); } }
 
+  // print the edges
   for (int i = 0; i < nEdge; i++) {
     int a = edges[2*i  ];
     int b = edges[2*i+1];

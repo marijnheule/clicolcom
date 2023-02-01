@@ -90,7 +90,7 @@ do
 done
 #echo $MAX
 
-LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 -f | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
+LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
 #echo $MAX
 #wc opt-$$.ord
 if [ "$LEVEL" = "" ]; then
@@ -108,7 +108,7 @@ else
   for i in $(eval echo "{$MAX..200}")
   do
 #    ./color $GRAPH $i opt-$$.ord | ./cadical/build/cadical --forcephase=1 --phase=1
-    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 -f | grep SATIS | awk '{print $2}'`
+    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
     if [ "$RESULT" = "$UNS" ]; then
       echo -n "U"
     elif [ "$RESULT" = "$SAT" ]; then
