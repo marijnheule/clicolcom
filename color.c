@@ -101,6 +101,7 @@ int main (int argc, char** argv) {
           if (domain[j]) printf ("%i ", i * colors + j);
         printf ("0\n"); } }
 
+  // removed in lines below because it refers to the variable names instead of the order
   if (argc > 3 && orderSize > clique) {
     for (int i = clique; i < orderSize; i++)
 //      if (in[i])
