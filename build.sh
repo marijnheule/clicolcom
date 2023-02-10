@@ -1,3 +1,5 @@
+mkdir cliques
+mkdir DSATUR/obj
 make
 cd cliquer
 make
