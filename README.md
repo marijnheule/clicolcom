@@ -26,3 +26,16 @@ e 2 3
 e 3 4
 e 4 5
 e 5 1
+
+The repository also contains a script for hard graphs
+
+  ./new-loop.sh graph.edge
+
+The algorithm of the script is described here:
+
+Marijn J. H. Heule, Anthony Karahalios, and Willem-Jan van Hoeve (2022).
+From Cliques to Colorings and Back Again.
+In Principles and Practice of Constraint Programming - CP 2022: 26:1–26:10.
+Leibniz International Proceedings in Informatics (LIPIcs) 235, Dagstuhl. 
+https://www.cs.cmu.edu/~mheule/publications/CP22-CliColCom.pdf
+

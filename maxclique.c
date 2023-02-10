@@ -9,7 +9,7 @@
 
 // argv[1] : graph in DIMACS format
 // argv[2] : number of colors
-// argv[3] : graph coloring (optinal)
+// argv[3] : graph coloring (optional)
 // argv[4] : offset (optinal, default = 0)
 
 void atmostk (int *array, int size, int bound, int start) {
