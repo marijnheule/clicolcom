@@ -1,3 +1,4 @@
+#!/bin/bash
 GRAPH=$1
 TIMEFORMAT=%R
 
