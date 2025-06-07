@@ -2588,7 +2588,7 @@ static int isetDegreeCMP(const void *p_iset1, const void *p_iset2) {
 
 //double ISETS_SumDegree[tab_node_size];
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
   setvbuf(stdout,(char *)NULL,_IOLBF,0);
   int i, result, ordering;
   //  unsigned long long begintime, endtime, mess;

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 GRAPH=$1
 BASE=${GRAPH##*/}
 BASE=${BASE%.*}
