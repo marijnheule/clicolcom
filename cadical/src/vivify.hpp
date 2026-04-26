@@ -9,7 +9,8 @@ struct Vivifier {
   vector<Clause *> schedule, stack;
   vector<int> sorted;
   bool redundant_mode;
-  Vivifier (bool mode) : redundant_mode (mode) { }
+  std::vector<std::tuple<int, Clause *, bool>> lrat_stack;
+  Vivifier (bool mode) : redundant_mode (mode) {}
 
   void erase () {
     erase_vector (schedule);
@@ -18,6 +19,6 @@ struct Vivifier {
   }
 };
 
-}
+} // namespace CaDiCaL
 
 #endif

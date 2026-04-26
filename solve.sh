@@ -1,4 +1,6 @@
 GRAPH=$1
-TIMEFORMAT=%R
+#TIMEFORMAT=%R
 
-time ./loop-solve.sh $GRAPH
+#time ./loop-solve.sh $GRAPH
+
+./new-loop.sh $GRAPH

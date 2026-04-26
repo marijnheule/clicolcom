@@ -1,8 +1,13 @@
 #!/bin/bash
 
+echo "c WARNING: this is outdated"
+
 GRAPH=$1
 BASE=${GRAPH##*/}
 BASE=${BASE%.*}
+
+CDCL=./cadical/build/cadical
+OPTA=--orderencode
 
 DIR=tmp
 mkdir -p $DIR
@@ -17,24 +22,25 @@ UNS="UNSATISFIABLE"
 UNK="UNKNOWN"
 
 #CL=`(timeout 1 ./cliquer/cl $GRAPH -r degree | grep max | tail -n 1 | tr ")" " " | awk '{print $3}')`
-CL=`(timeout 1 ./inc_max_clique $GRAPH 1 | tail -n 4 | grep 'Max Clique Size: ' | sed 's/Max Clique Size: //g')`
+CL=`(timeout 10 ./inc_max_clique $GRAPH 1 | tail -n 4 | grep 'Max Clique Size: ' | sed 's/Max Clique Size: //g')`
 if [ "$CL" == "" ]; then
   CL=1
 fi
-echo "c initial clique by cliquer: "$CL
+#echo "c initial clique by cliquer: "$CL
+echo "c initial clique by inc_max_clique: "$CL
 
 EXT=10
 echo -n "c "
 
 for i in $(eval echo "{$CL..300}")
 do
-  RESULT=`./maxclique $GRAPH $i | ./cadical/build/cadical -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
+  RESULT=`./maxclique $GRAPH $i | $CDCL $OPTA -c 10000 | grep -e SATIS -e UNKNOWN | awk '{print $2}'`
   if [ "$RESULT" = "$SAT" ]; then
     echo -n "S"
   elif [ "$RESULT" = "$UNS" ]; then
     MAX=$(($i - 1))
     echo "* "$MAX
-    ./maxclique $GRAPH $MAX | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+    ./maxclique $GRAPH $MAX | $CDCL $OPTA | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
     cp $DIR/clique-$$.ord cliques/$BASE.clq
     ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
     cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
@@ -64,14 +70,14 @@ do
     done
     for j in $(eval echo "{$EXT..1}")
     do
-      SUB=`./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep SATIS | awk '{print $2}'`
+      SUB=`./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | $CDCL $OPTA | grep SATIS | awk '{print $2}'`
       if [ "$SUB" = "$SAT" ]; then
         echo -n "S"
       elif [ "$SUB" = "$UNS" ]; then
         MAX=$(($UP - $j - 1))
         echo "* "$MAX
         j=$(($j + 1))
-        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | ./cadical/build/cadical | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
+        ./maxclique $GRAPH $UP $DIR/tmp-$UP-$$.mod $j | $CDCL $OPTA | grep "^v" | ./strip.sh | awk '{if ($1 <= '$NV') print $0}' > $DIR/clique-$$.ord
         cp $DIR/clique-$$.ord cliques/$BASE.clq
         ./optimize-ord $GRAPH $DIR/clique-$$.ord > $DIR/opt-$$.ord
         cp $DIR/opt-$$.ord $DIR/$BASE-$MAX.ord
@@ -92,31 +98,34 @@ do
 done
 #echo $MAX
 
-LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | ./cadical/build/cadical --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
+LEVEL=`./color $GRAPH $MAX $DIR/opt-$$.ord | $CDCL $OPTA --unsat -c 100000 | grep -e "SATIS" -e "c \- " | tail -n 1 | awk '{print $5}'`
 #echo $MAX
 #wc opt-$$.ord
 if [ "$LEVEL" = "" ]; then
   LEVEL=0
 fi
-#echo $LEVEL
+echo $LEVEL
 
-if (( "$LEVEL" > "15" )); then
+if (( "$LEVEL" > "50" )); then
   ./color $GRAPH $MAX > $DIR/formula-$$.cnf
   ./ubcsat/ubcsat -i $DIR/formula-$$.cnf -alg ddfw -solve -cutoff 100000000 | grep " 1 1"
   rm $DIR/formula-$$.cnf
+  echo "c WARNING: the line above should contain 1 1"
   echo "c max clique is equal to chromatic number"
 else
   echo -n "c "
   for i in $(eval echo "{$MAX..200}")
   do
 #    ./color $GRAPH $i opt-$$.ord | ./cadical/build/cadical --forcephase=1 --phase=1
-    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
+    RESULT=`./color $GRAPH $i $DIR/opt-$$.ord | $CDCL $OPTA --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
     if [ "$RESULT" = "$UNS" ]; then
       echo -n "U"
     elif [ "$RESULT" = "$SAT" ]; then
       echo "* "$i
       if [ "$i" = "$MAX" ]; then
         echo "c max clique is equal to chromatic number"
+      else
+        echo "c chromatic number is "$i
       fi
       break
    else

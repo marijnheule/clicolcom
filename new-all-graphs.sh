@@ -33,7 +33,7 @@ time ./new-loop.sh graphs/5-FullIns_4.col
 #./new-loop.sh graphs/DSJC1000.9.col
 time ./new-loop.sh graphs/DSJC125.1.col
 #./new-loop.sh graphs/DSJC125.5.col
-####./new-loop.sh graphs/DSJC125.9.col # seems too difficult
+#./new-loop.sh graphs/DSJC125.9.col # seems too difficult
 #./new-loop.sh graphs/DSJC250.1.col
 #./new-loop.sh graphs/DSJC250.5.col
 #./new-loop.sh graphs/DSJC250.9.col
@@ -42,8 +42,8 @@ time ./new-loop.sh graphs/DSJC125.1.col
 #./new-loop.sh graphs/DSJC500.9.col
 time ./new-loop.sh graphs/DSJR500.1.col
 time ./new-loop.sh graphs/DSJR500.1c.col  ## doable but it takes a while
-###./new-loop.sh graphs/DSJR500.5.col   ## might be doable. yalsat with --eager gets down to 6 falsified clauses
-#time ./new-loop.sh graphs/abb313GPIA.col # depends on the seed
+time ./new-loop.sh graphs/DSJR500.5.col   ## doable with ddfw
+time ./new-loop.sh graphs/abb313GPIA.col # depends on the seed
 time ./new-loop.sh graphs/anna.col
 time ./new-loop.sh graphs/ash331GPIA.col
 time ./new-loop.sh graphs/ash608GPIA.col
@@ -101,8 +101,8 @@ time ./new-loop.sh graphs/myciel6.col
 time ./new-loop.sh graphs/qg.order30.col
 time ./new-loop.sh graphs/qg.order40.col #doable but expensive
 time ./new-loop.sh graphs/qg.order60.col
-#./new-loop.sh graphs/queen10_10.col
-#./new-loop.sh graphs/queen11_11.col
+time ./new-loop.sh graphs/queen10_10.col
+#time ./new-loop.sh graphs/queen11_11.col # hard satisfiable instance
 #./new-loop.sh graphs/queen12_12.col
 #./new-loop.sh graphs/queen13_13.col
 #./new-loop.sh graphs/queen14_14.col
@@ -113,7 +113,7 @@ time ./new-loop.sh graphs/queen6_6.col
 time ./new-loop.sh graphs/queen7_7.col
 time ./new-loop.sh graphs/queen8_12.col
 time ./new-loop.sh graphs/queen8_8.col
-#time ./new-loop.sh graphs/queen9_9.col  # can be hard
+time ./new-loop.sh graphs/queen9_9.col  # can be hard
 time ./new-loop.sh graphs/r1000.1.col
 #./new-loop.sh graphs/r1000.1c.col
 #./new-loop.sh graphs/r1000.5.col

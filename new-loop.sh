@@ -1,6 +1,11 @@
+#!/bin/bash
+
 GRAPH=$1
 
-CDCLLIM=10000000
+CDCL=./cadical/build/cadical
+OPTA=--orderencode
+
+CDCLLIM=100000000
 DDFWLIM=100000000
 
 SEED=123456
@@ -11,15 +16,17 @@ UNK="UNKNOWN"
 
 #start=`date +%s`
 echo $GRAPH
-timeout 1 ./inc_max_clique $GRAPH > tmp-clq-$$.txt
+timeout 10 ./inc_max_clique $GRAPH > tmp-clq-$$.txt
 cat tmp-clq-$$.txt | grep "Clique Output:" | tail -n 1 | sed 's|Clique Output: ||' | tr " " "\n" > tmp-$$.clq
 SIZE=`wc tmp-$$.clq | awk '{print $1}'`
 if grep -q terminated tmp-clq-$$.txt
 then
   rm tmp-clq-$$.txt
   echo "c found max clique of size "$SIZE
+  echo -n "c clique: "; cat tmp-$$.clq | tr "\n" " "; echo;
   CUT=$(($CDCLLIM/$SIZE))
-  ./color $GRAPH $SIZE tmp-$$.clq | ./cadical/build/cadical --forcephase=1 --phase=0 -c $CUT | grep SATIS > tmp-cdcl-$$.txt
+#  ./color $GRAPH $SIZE tmp-$$.clq > tmp-$SIZE.cnf
+  ./color $GRAPH $SIZE tmp-$$.clq | $CDCL $OPTA --forcephase=1 --phase=0 -c $CUT | grep SATIS > tmp-cdcl-$$.txt
   if grep -q "s SATISFIABLE" tmp-cdcl-$$.txt
   then
     rm tmp-cdcl-$$.txt
@@ -33,7 +40,8 @@ then
     echo -n "c "
     for i in $(eval echo "{$SIZE..200}")
     do
-      RESULT=`./color $GRAPH $i tmp-$$.ord | ./cadical/build/cadical --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
+#      ./color $GRAPH $i tmp-$$.ord > tmp-$i.cnf
+      RESULT=`./color $GRAPH $i tmp-$$.ord | $CDCL $OPTA --unsat --forcephase=1 --phase=0 | grep SATIS | awk '{print $2}'`
       if [ "$RESULT" = "$UNS" ]; then
         echo -n "U"
       elif [ "$RESULT" = "$SAT" ]; then

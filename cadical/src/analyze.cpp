@@ -14,16 +14,30 @@ namespace CaDiCaL {
 
 void Internal::learn_empty_clause () {
   assert (!unsat);
+  build_chain_for_empty ();
   LOG ("learned empty clause");
   external->check_learned_empty_clause ();
-  if (proof) proof->add_derived_empty_clause ();
+  int64_t id = ++clause_id;
+  if (proof) {
+    proof->add_derived_empty_clause (id, lrat_chain);
+  }
   unsat = true;
+  conflict_id = id;
+  marked_failed = true;
+  conclusion.push_back (id);
+  lrat_chain.clear ();
 }
 
 void Internal::learn_unit_clause (int lit) {
+  assert (!unsat);
   LOG ("learned unit clause %d", lit);
   external->check_learned_unit_clause (lit);
-  if (proof) proof->add_derived_unit_clause (lit);
+  int64_t id = ++clause_id;
+  const unsigned uidx = vlit (lit);
+  unit_clauses[uidx] = id;
+  if (proof) {
+    proof->add_derived_unit_clause (id, lit, lrat_chain);
+  }
   mark_fixed (lit);
 }
 
@@ -36,13 +50,16 @@ void Internal::learn_unit_clause (int lit) {
 void Internal::bump_queue (int lit) {
   assert (opts.bump);
   const int idx = vidx (lit);
-  if (!links[idx].next) return;
+  if (!links[idx].next)
+    return;
   queue.dequeue (links, idx);
   queue.enqueue (links, idx);
   assert (stats.bumped != INT64_MAX);
   btab[idx] = ++stats.bumped;
-  LOG ("moved to front variable %d and bumped to %" PRId64 "", idx, btab[idx]);
-  if (!vals[idx]) update_queue_unassigned (idx);
+  LOG ("moved to front variable %d and bumped to %" PRId64 "", idx,
+       btab[idx]);
+  if (!vals[idx])
+    update_queue_unassigned (idx);
 }
 
 /*------------------------------------------------------------------------*/
@@ -68,18 +85,19 @@ void Internal::rescale_variable_scores () {
   double divider = score_inc;
   for (auto idx : vars) {
     const double tmp = stab[idx];
-    if (tmp > divider) divider = tmp;
+    if (tmp > divider)
+      divider = tmp;
   }
-  PHASE ("rescore", stats.rescored,
-    "rescoring %d variable scores by 1/%g", max_var, divider);
+  PHASE ("rescore", stats.rescored, "rescoring %d variable scores by 1/%g",
+         max_var, divider);
   assert (divider > 0);
   double factor = 1.0 / divider;
   for (auto idx : vars)
     stab[idx] *= factor;
   score_inc *= factor;
   PHASE ("rescore", stats.rescored,
-    "new score increment %g after %" PRId64 " conflicts",
-    score_inc, stats.conflicts);
+         "new score increment %g after %" PRId64 " conflicts", score_inc,
+         stats.conflicts);
 }
 
 void Internal::bump_variable_score (int lit) {
@@ -98,14 +116,17 @@ void Internal::bump_variable_score (int lit) {
   assert (!evsids_limit_hit (new_score));
   LOG ("new %g score of %d", new_score, idx);
   score (idx) = new_score;
-  if (scores.contains (idx)) scores.update (idx);
+  if (scores.contains (idx))
+    scores.update (idx);
 }
 
 // Important variables recently used in conflict analysis are 'bumped',
 
 void Internal::bump_variable (int lit) {
-  if (use_scores ()) bump_variable_score (lit);
-  else bump_queue (lit);
+  if (use_scores ())
+    bump_variable_score (lit);
+  else
+    bump_queue (lit);
 }
 
 // After every conflict the variable score increment is increased by a
@@ -114,34 +135,33 @@ void Internal::bump_variable (int lit) {
 void Internal::bump_variable_score_inc () {
   assert (use_scores ());
   assert (!evsids_limit_hit (score_inc));
-  double f = 1e3/opts.scorefactor;
+  double f = 1e3 / opts.scorefactor;
   double new_score_inc = score_inc * f;
   if (evsids_limit_hit (new_score_inc)) {
-    LOG ("bumping %g increment by %g hits EVSIDS score limit", score_inc, f);
+    LOG ("bumping %g increment by %g hits EVSIDS score limit", score_inc,
+         f);
     rescale_variable_scores ();
     new_score_inc = score_inc * f;
   }
   assert (!evsids_limit_hit (new_score_inc));
-  LOG ("bumped score increment from %g to %g with factor %g",
-    score_inc, new_score_inc, f);
+  LOG ("bumped score increment from %g to %g with factor %g", score_inc,
+       new_score_inc, f);
   score_inc = new_score_inc;
 }
 
 /*------------------------------------------------------------------------*/
 
 struct analyze_bumped_rank {
-  Internal * internal;
-  analyze_bumped_rank (Internal * i) : internal (i) { }
+  Internal *internal;
+  analyze_bumped_rank (Internal *i) : internal (i) {}
   typedef uint64_t Type;
-  Type operator () (const int & a) const {
-    return internal->bumped (a);
-  }
+  Type operator() (const int &a) const { return internal->bumped (a); }
 };
 
 struct analyze_bumped_smaller {
-  Internal * internal;
-  analyze_bumped_smaller (Internal * i) : internal (i) { }
-  bool operator () (const int & a, const int & b) const {
+  Internal *internal;
+  analyze_bumped_smaller (Internal *i) : internal (i) {}
+  bool operator() (const int &a, const int &b) const {
     const auto s = analyze_bumped_rank (internal) (a);
     const auto t = analyze_bumped_rank (internal) (b);
     return s < t;
@@ -156,7 +176,8 @@ void Internal::bump_variables () {
 
   START (bump);
 
-  if (opts.bumpreason) bump_also_all_reason_literals ();
+  if (opts.bumpreason)
+    bump_also_all_reason_literals ();
 
   if (!use_scores ()) {
 
@@ -166,15 +187,15 @@ void Internal::bump_variables () {
     // focusing on variables of the last decision level, but results were
     // mixed.
 
-    MSORT (opts.radixsortlim,
-      analyzed.begin (), analyzed.end (),
-      analyze_bumped_rank (this), analyze_bumped_smaller (this));
+    MSORT (opts.radixsortlim, analyzed.begin (), analyzed.end (),
+           analyze_bumped_rank (this), analyze_bumped_smaller (this));
   }
 
-  for (const auto & lit : analyzed)
+  for (const auto &lit : analyzed)
     bump_variable (lit);
 
-  if (use_scores ()) bump_variable_score_inc ();
+  if (use_scores ())
+    bump_variable_score_inc ();
 
   STOP (bump);
 }
@@ -183,13 +204,14 @@ void Internal::bump_variables () {
 
 // We use the glue time stamp table 'gtab' for fast glue computation.
 
-int Internal::recompute_glue (Clause * c) {
+int Internal::recompute_glue (Clause *c) {
   int res = 0;
   const int64_t stamp = ++stats.recomputed;
-  for (const auto & lit : *c) {
+  for (const auto &lit : *c) {
     int level = var (lit).level;
     assert (gtab[level] <= stamp);
-    if (gtab[level] == stamp) continue;
+    if (gtab[level] == stamp)
+      continue;
     gtab[level] = stamp;
     res++;
   }
@@ -200,16 +222,21 @@ int Internal::recompute_glue (Clause * c) {
 // glue is recomputed and they are promoted if the glue shrinks.  Note that
 // promotion from 'tier3' to 'tier2' will set 'used' to '2'.
 
-inline void Internal::bump_clause (Clause * c) {
+inline void Internal::bump_clause (Clause *c) {
   LOG (c, "bumping");
   unsigned used = c->used;
   c->used = 1;
-  if (c->keep) return;
-  if (c->hyper) return;
-  if (!c->redundant) return;
+  if (c->keep)
+    return;
+  if (c->hyper)
+    return;
+  if (!c->redundant)
+    return;
   int new_glue = recompute_glue (c);
-  if (new_glue < c->glue) promote_clause (c, new_glue);
-  else if (used && c->glue <= opts.reducetier2glue) c->used = 2;
+  if (new_glue < c->glue)
+    promote_clause (c, new_glue);
+  else if (used && c->glue <= opts.reducetier2glue)
+    c->used = 2;
 }
 
 /*------------------------------------------------------------------------*/
@@ -222,35 +249,60 @@ inline void Internal::bump_clause (Clause * c) {
 // minimization.  The number of seen levels is the glucose level (also
 // called 'glue', or 'LBD').
 
-inline void
-Internal::analyze_literal (int lit, int & open) {
+inline void Internal::analyze_literal (int lit, int &open,
+                                       int &resolvent_size,
+                                       int &antecedent_size) {
   assert (lit);
-  Flags & f = flags (lit);
-  if (f.seen) return;
-  Var & v = var (lit);
-  if (!v.level) return;
+  Var &v = var (lit);
+  Flags &f = flags (lit);
+
+  if (!v.level) {
+    if (f.seen || !lrat)
+      return;
+    f.seen = true;
+    unit_analyzed.push_back (lit);
+    assert (val (lit) < 0);
+    const unsigned uidx = vlit (-lit);
+    uint64_t id = unit_clauses[uidx];
+    assert (id);
+    unit_chain.push_back (id);
+    return;
+  }
+  ++antecedent_size;
+  if (f.seen)
+    return;
+  f.seen = true;
+  analyzed.push_back (lit);
+
   assert (val (lit) < 0);
   assert (v.level <= level);
-  if (v.level < level) clause.push_back (lit);
-  Level & l = control[v.level];
+  assert (v.reason != external_reason);
+  if (v.level < level)
+    clause.push_back (lit);
+  Level &l = control[v.level];
   if (!l.seen.count++) {
     LOG ("found new level %d contributing to conflict", v.level);
     levels.push_back (v.level);
   }
-  if (v.trail < l.seen.trail) l.seen.trail = v.trail;
-  f.seen = true;
-  analyzed.push_back (lit);
+  if (v.trail < l.seen.trail)
+    l.seen.trail = v.trail;
+  ++resolvent_size;
   LOG ("analyzed literal %d assigned at level %d", lit, v.level);
-  if (v.level == level) open++;
+  if (v.level == level)
+    open++;
 }
 
-inline void
-Internal::analyze_reason (int lit, Clause * reason, int & open) {
+inline void Internal::analyze_reason (int lit, Clause *reason, int &open,
+                                      int &resolvent_size,
+                                      int &antecedent_size) {
   assert (reason);
+  assert (reason != external_reason);
   bump_clause (reason);
-  for (const auto & other : *reason)
+  if (lrat)
+    lrat_chain.push_back (reason->id);
+  for (const auto &other : *reason)
     if (other != lit)
-      analyze_literal (other, open);
+      analyze_literal (other, open, resolvent_size, antecedent_size);
 }
 
 /*------------------------------------------------------------------------*/
@@ -269,10 +321,12 @@ Internal::analyze_reason (int lit, Clause * reason, int & open) {
 inline bool Internal::bump_also_reason_literal (int lit) {
   assert (lit);
   assert (val (lit) < 0);
-  Flags & f = flags (lit);
-  if (f.seen) return false;
-  const Var & v = var (lit);
-  if (!v.level) return false;
+  Flags &f = flags (lit);
+  if (f.seen)
+    return false;
+  const Var &v = var (lit);
+  if (!v.level)
+    return false;
   f.seen = true;
   analyzed.push_back (lit);
   LOG ("bumping also reason literal %d assigned at level %d", lit, v.level);
@@ -284,16 +338,21 @@ inline bool Internal::bump_also_reason_literal (int lit) {
 inline void Internal::bump_also_reason_literals (int lit, int limit) {
   assert (lit);
   assert (limit > 0);
-  const Var & v = var (lit);
+  const Var &v = var (lit);
   assert (val (lit));
-  if (!v.level) return;
-  Clause * reason = v.reason;
-  if (!reason) return;
-  for (const auto & other : *reason) {
-    if (other == lit)  continue;
-    if (!bump_also_reason_literal (other)) continue;
-    if (limit < 2) continue;
-    bump_also_reason_literals (-other, limit-1);
+  if (!v.level)
+    return;
+  Clause *reason = v.reason;
+  if (!reason || reason == external_reason)
+    return;
+  for (const auto &other : *reason) {
+    if (other == lit)
+      continue;
+    if (!bump_also_reason_literal (other))
+      continue;
+    if (limit < 2)
+      continue;
+    bump_also_reason_literals (-other, limit - 1);
   }
 }
 
@@ -301,16 +360,30 @@ inline void Internal::bump_also_all_reason_literals () {
   assert (opts.bumpreason);
   assert (opts.bumpreasondepth > 0);
   LOG ("bumping reasons up to depth %d", opts.bumpreasondepth);
-  for (const auto & lit : clause)
+  for (const auto &lit : clause)
     bump_also_reason_literals (-lit, opts.bumpreasondepth + stable);
 }
 
 /*------------------------------------------------------------------------*/
 
+void Internal::clear_unit_analyzed_literals () {
+  LOG ("clearing %zd unit analyzed literals", unit_analyzed.size ());
+  for (const auto &lit : unit_analyzed) {
+    Flags &f = flags (lit);
+    assert (f.seen);
+    assert (!var (lit).level);
+    f.seen = false;
+    assert (!f.keep);
+    assert (!f.poison);
+    assert (!f.removable);
+  }
+  unit_analyzed.clear ();
+}
+
 void Internal::clear_analyzed_literals () {
   LOG ("clearing %zd analyzed literals", analyzed.size ());
-  for (const auto & lit : analyzed) {
-    Flags & f = flags (lit);
+  for (const auto &lit : analyzed) {
+    Flags &f = flags (lit);
     assert (f.seen);
     f.seen = false;
     assert (!f.keep);
@@ -318,11 +391,19 @@ void Internal::clear_analyzed_literals () {
     assert (!f.removable);
   }
   analyzed.clear ();
+#ifndef NDEBUG
+  if (unit_analyzed.size ())
+    return;
+  for (auto idx : vars) {
+    Flags &f = flags (idx);
+    assert (!f.seen);
+  }
+#endif
 }
 
 void Internal::clear_analyzed_levels () {
   LOG ("clearing %zd analyzed levels", levels.size ());
-  for (const auto & l : levels)
+  for (const auto &l : levels)
     if (l < (int) control.size ())
       control[l].reset ();
   levels.clear ();
@@ -335,11 +416,11 @@ void Internal::clear_analyzed_levels () {
 // respect level order.
 
 struct analyze_trail_negative_rank {
-  Internal * internal;
-  analyze_trail_negative_rank (Internal * s) : internal (s) { }
+  Internal *internal;
+  analyze_trail_negative_rank (Internal *s) : internal (s) {}
   typedef uint64_t Type;
-  Type operator () (int a) {
-    Var & v = internal->var (a);
+  Type operator() (int a) {
+    Var &v = internal->var (a);
     uint64_t res = v.level;
     res <<= 32;
     res |= v.trail;
@@ -348,12 +429,11 @@ struct analyze_trail_negative_rank {
 };
 
 struct analyze_trail_larger {
-  Internal * internal;
-  analyze_trail_larger (Internal * s) : internal (s) { }
-  bool operator () (const int & a, const int & b) const {
-    return
-      analyze_trail_negative_rank (internal) (a) <
-      analyze_trail_negative_rank (internal) (b);
+  Internal *internal;
+  analyze_trail_larger (Internal *s) : internal (s) {}
+  bool operator() (const int &a, const int &b) const {
+    return analyze_trail_negative_rank (internal) (a) <
+           analyze_trail_negative_rank (internal) (b);
   }
 };
 
@@ -361,10 +441,10 @@ struct analyze_trail_larger {
 
 // Generate new driving clause and compute jump level.
 
-Clause * Internal::new_driving_clause (const int glue, int & jump) {
+Clause *Internal::new_driving_clause (const int glue, int &jump) {
 
   const size_t size = clause.size ();
-  Clause * res;
+  Clause *res;
 
   if (!size) {
 
@@ -388,8 +468,7 @@ Clause * Internal::new_driving_clause (const int glue, int & jump) {
     // the opposite order) with the hope to hit the recursion limit less
     // frequently.  Thus sorting effort is doubled here.
     //
-    MSORT (opts.radixsortlim,
-           clause.begin (), clause.end (),
+    MSORT (opts.radixsortlim, clause.begin (), clause.end (),
            analyze_trail_negative_rank (this), analyze_trail_larger (this));
 
     jump = var (clause[1]).level;
@@ -404,22 +483,43 @@ Clause * Internal::new_driving_clause (const int glue, int & jump) {
 
 /*------------------------------------------------------------------------*/
 
+// determine the OTFS level for OTFS. Unlike the find_conflict_level, we do
+// not have to fix the clause
+
+inline int Internal::otfs_find_backtrack_level (int &forced) {
+  assert (opts.otfs);
+  int res = 0;
+
+  for (const auto &lit : *conflict) {
+    const int tmp = var (lit).level;
+    if (tmp == level) {
+      forced = lit;
+    } else if (tmp > res) {
+      res = tmp;
+      LOG ("bt level is now %d due to %d", res, lit);
+    }
+  }
+  return res;
+}
+
+/*------------------------------------------------------------------------*/
+
 // If chronological backtracking is enabled we need to find the actual
 // conflict level and then potentially can also reuse the conflict clause
 // as driving clause instead of deriving a redundant new driving clause
 // (forcing 'forced') if the number 'count' of literals in conflict assigned
 // at the conflict level is exactly one.
 
-inline int Internal::find_conflict_level (int & forced) {
+inline int Internal::find_conflict_level (int &forced) {
 
   assert (conflict);
-  assert (opts.chrono);
+  assert (opts.chrono || opts.otfs || external_prop);
 
   int res = 0, count = 0;
 
   forced = 0;
 
-  for (const auto & lit : *conflict) {
+  for (const auto &lit : *conflict) {
     const int tmp = var (lit).level;
     if (tmp > res) {
       res = tmp;
@@ -435,7 +535,7 @@ inline int Internal::find_conflict_level (int & forced) {
   LOG ("%d literals on actual conflict level %d", count, res);
 
   const int size = conflict->size;
-  int * lits = conflict->literals;
+  int *lits = conflict->literals;
 
   // Move the two highest level literals to the front.
   //
@@ -450,22 +550,24 @@ inline int Internal::find_conflict_level (int & forced) {
     for (int j = i + 1; j < size; j++) {
       const int other = lits[j];
       const int tmp = var (other).level;
-      if (highest_level >= tmp) continue;
+      if (highest_level >= tmp)
+        continue;
       highest_literal = other;
       highest_position = j;
       highest_level = tmp;
-      if (highest_level == res) break;
+      if (highest_level == res)
+        break;
     }
 
     // No unwatched higher assignment level literal.
     //
-    if (highest_position == i) continue;
+    if (highest_position == i)
+      continue;
 
-    if (highest_position > 1)
-      {
-        LOG (conflict, "unwatch %d in", lit);
-        remove_watch (watches (lit), conflict);
-      }
+    if (highest_position > 1) {
+      LOG (conflict, "unwatch %d in", lit);
+      remove_watch (watches (lit), conflict);
+    }
 
     lits[highest_position] = lit;
     lits[i] = highest_literal;
@@ -477,7 +579,8 @@ inline int Internal::find_conflict_level (int & forced) {
   // Only if the number of highest level literals in the conflict is one
   // then we can reuse the conflict clause as driving clause for 'forced'.
   //
-  if (count != 1) forced = 0;
+  if (count != 1)
+    forced = 0;
 
   return res;
 }
@@ -503,21 +606,21 @@ inline int Internal::determine_actual_backtrack_level (int jump) {
   } else if ((size_t) jump < assumptions.size ()) {
     res = jump;
     LOG ("using jump level %d since it is lower than assumption level %zd",
-      res, assumptions.size ());
+         res, assumptions.size ());
   } else if (level - jump > opts.chronolevelim) {
     stats.chrono++;
     res = level - 1;
     LOG ("back-jumping over %d > %d levels prohibited"
-      "thus backtracking chronologically to level %d",
-      level - jump, opts.chronolevelim, res);
+         "thus backtracking chronologically to level %d",
+         level - jump, opts.chronolevelim, res);
   } else if (opts.chronoreusetrail) {
-
     int best_idx = 0, best_pos = 0;
 
     if (use_scores ()) {
       for (size_t i = control[jump + 1].trail; i < trail.size (); i++) {
         const int idx = abs (trail[i]);
-        if (best_idx && !score_smaller (this) (best_idx, idx)) continue;
+        if (best_idx && !score_smaller (this) (best_idx, idx))
+          continue;
         best_idx = idx;
         best_pos = i;
       }
@@ -525,7 +628,8 @@ inline int Internal::determine_actual_backtrack_level (int jump) {
     } else {
       for (size_t i = control[jump + 1].trail; i < trail.size (); i++) {
         const int idx = abs (trail[i]);
-        if (best_idx && bumped (best_idx) >= bumped (idx)) continue;
+        if (best_idx && bumped (best_idx) >= bumped (idx))
+          continue;
         best_idx = idx;
         best_pos = i;
       }
@@ -542,7 +646,7 @@ inline int Internal::determine_actual_backtrack_level (int jump) {
     // of the control frame one higher than at the result level.
     //
     res = jump;
-    while (res < level-1 && control[res+1].trail <= best_pos)
+    while (res < level - 1 && control[res + 1].trail <= best_pos)
       res++;
 
     if (res == jump)
@@ -562,7 +666,7 @@ inline int Internal::determine_actual_backtrack_level (int jump) {
 
 /*------------------------------------------------------------------------*/
 
-void Internal::eagerly_subsume_recently_learned_clauses (Clause * c) {
+void Internal::eagerly_subsume_recently_learned_clauses (Clause *c) {
   assert (opts.eagersubsume);
   LOG (c, "trying eager subsumption with");
   mark (c);
@@ -573,16 +677,22 @@ void Internal::eagerly_subsume_recently_learned_clauses (Clause * c) {
   int64_t before = stats.eagersub;
 #endif
   while (it != begin && stats.eagertried++ <= lim) {
-    Clause * d =  *--it;
-    if (c == d) continue;
-    if (d->garbage) continue;
-    if (!d->redundant) continue;
+    Clause *d = *--it;
+    if (c == d)
+      continue;
+    if (d->garbage)
+      continue;
+    if (!d->redundant)
+      continue;
     int needed = c->size;
-    for (auto & lit : *d) {
-      if (marked (lit) <= 0) continue;
-      if (!--needed) break;
+    for (auto &lit : *d) {
+      if (marked (lit) <= 0)
+        continue;
+      if (!--needed)
+        break;
     }
-    if (needed) continue;
+    if (needed)
+      continue;
     LOG (d, "eager subsumed");
     stats.eagersub++;
     stats.subsumed++;
@@ -591,8 +701,151 @@ void Internal::eagerly_subsume_recently_learned_clauses (Clause * c) {
   unmark (c);
 #ifdef LOGGING
   uint64_t subsumed = stats.eagersub - before;
-  if (subsumed) LOG ("eagerly subsumed %" PRIu64 " clauses", subsumed);
+  if (subsumed)
+    LOG ("eagerly subsumed %" PRIu64 " clauses", subsumed);
 #endif
+}
+
+/*------------------------------------------------------------------------*/
+
+Clause *Internal::on_the_fly_strengthen (Clause *new_conflict, int uip) {
+  assert (new_conflict);
+  assert (new_conflict->size > 2);
+  LOG (new_conflict, "applying OTFS on lit %d", uip);
+  auto sorted = std::vector<int> ();
+  sorted.reserve (new_conflict->size);
+  assert (sorted.empty ());
+  ++stats.otfs.strengthened;
+
+  int *lits = new_conflict->literals;
+
+  assert (lits[0] == uip || lits[1] == uip);
+  const int other_init = lits[0] ^ lits[1] ^ uip;
+
+  assert (mini_chain.empty ());
+
+  const int old_size = new_conflict->size;
+  int new_size = 0;
+  for (int i = 0; i < old_size; ++i) {
+    const int other = lits[i];
+    sorted.push_back (other);
+    if (var (other).level)
+      lits[new_size++] = other;
+  }
+
+  LOG (new_conflict, "removing all units in");
+
+  assert (lits[0] == uip || lits[1] == uip);
+  const int other = lits[0] ^ lits[1] ^ uip;
+  lits[0] = other;
+  lits[1] = lits[--new_size];
+  LOG (new_conflict, "putting uip at pos 1");
+
+  if (other_init != other)
+    remove_watch (watches (other_init), new_conflict);
+  remove_watch (watches (uip), new_conflict);
+
+  assert (!lrat || lrat_chain.back () == new_conflict->id);
+  if (lrat) {
+    assert (!lrat_chain.empty ());
+    for (const auto &id : unit_chain) {
+      mini_chain.push_back (id);
+    }
+    const auto end = lrat_chain.rend ();
+    const auto begin = lrat_chain.rbegin ();
+    for (auto i = begin; i != end; i++) {
+      const auto id = *i;
+      mini_chain.push_back (id);
+    }
+    lrat_chain.clear (); // see if this is correct...
+    clear_unit_analyzed_literals ();
+    unit_chain.clear ();
+  }
+  assert (unit_analyzed.empty ());
+  // sort the clause
+  {
+    int highest_pos = 0;
+    int highest_level = 0;
+    for (int i = 1; i < new_size; i++) {
+      const unsigned other = lits[i];
+      assert (val (other) < 0);
+      const int level = var (other).level;
+      assert (level);
+      LOG ("checking %d", other);
+      if (level <= highest_level)
+        continue;
+      highest_pos = i;
+      highest_level = level;
+    }
+    LOG ("highest lit is %d", lits[highest_pos]);
+    if (highest_pos != 1)
+      swap (lits[1], lits[highest_pos]);
+    LOG ("removing %d literals", new_conflict->size - new_size);
+    otfs_strengthen_clause (new_conflict, uip, new_size, sorted);
+    assert (new_size == new_conflict->size);
+  }
+
+  if (other_init != other)
+    watch_literal (other, lits[1], new_conflict);
+  else {
+    update_watch_size (watches (other), lits[1], new_conflict);
+  }
+  watch_literal (lits[1], other, new_conflict);
+
+  LOG (new_conflict, "strengthened clause by OTFS");
+  sorted.clear ();
+
+  return new_conflict;
+}
+
+/*------------------------------------------------------------------------*/
+inline void Internal::otfs_subsume_clause (Clause *subsuming,
+                                           Clause *subsumed) {
+  stats.subsumed++;
+  assert (subsuming->size <= subsumed->size);
+  LOG (subsumed, "subsumed");
+  if (subsumed->redundant)
+    stats.subred++;
+  else
+    stats.subirr++;
+  if (subsumed->redundant || !subsuming->redundant) {
+    mark_garbage (subsumed);
+    return;
+  }
+  LOG ("turning redundant subsuming clause into irredundant clause");
+  subsuming->redundant = false;
+  if (proof)
+    proof->strengthen (subsuming->id);
+  mark_garbage (subsumed);
+  stats.current.irredundant++;
+  stats.added.irredundant++;
+  stats.irrlits += subsuming->size;
+  assert (stats.current.redundant > 0);
+  stats.current.redundant--;
+  assert (stats.added.redundant > 0);
+  stats.added.redundant--;
+  // ... and keep 'stats.added.total'.
+}
+
+/*------------------------------------------------------------------------*/
+
+// Candidate clause 'c' is strengthened by removing 'lit' and units.
+//
+void Internal::otfs_strengthen_clause (Clause *c, int lit, int new_size,
+                                       const std::vector<int> &old) {
+  stats.strengthened++;
+  assert (c->size > 2);
+  (void) shrink_clause (c, new_size);
+  if (proof) {
+    proof->otfs_strengthen_clause (c, old, mini_chain);
+  }
+  if (!c->redundant) {
+    mark_removed (lit);
+  }
+  mini_chain.clear ();
+  c->used = true;
+  LOG (c, "strengthened");
+  external->check_shrunken_clause (c);
 }
 
 /*------------------------------------------------------------------------*/
@@ -609,15 +862,23 @@ void Internal::analyze () {
   START (analyze);
 
   assert (conflict);
+  assert (lrat_chain.empty ());
+  assert (unit_chain.empty ());
+  assert (unit_analyzed.empty ());
+  assert (clause.empty ());
 
   // First update moving averages of trail height at conflict.
   //
-  UPDATE_AVERAGE (averages.current.trail.fast, trail.size ());
-  UPDATE_AVERAGE (averages.current.trail.slow, trail.size ());
+  UPDATE_AVERAGE (averages.current.trail.fast, num_assigned);
+  UPDATE_AVERAGE (averages.current.trail.slow, num_assigned);
 
   /*----------------------------------------------------------------------*/
 
-  if (opts.chrono) {
+  if (external_prop && !external_prop_is_lazy) {
+    explain_external_propagations ();
+  }
+
+  if (opts.chrono || external_prop) {
 
     int forced;
 
@@ -645,6 +906,13 @@ void Internal::analyze () {
       //
       backtrack (conflict_level - 1);
 
+      // if we are on decision level 0 search assign will learn unit
+      // so we need a valid chain here (of course if we are not on decision
+      // level 0 this will not result in a valid chain).
+      // we can just use build_chain_for_units in propagate
+      //
+      build_chain_for_units (forced, conflict, 0);
+
       LOG ("forcing %d", forced);
       search_assign_driving (forced, conflict);
 
@@ -670,7 +938,9 @@ void Internal::analyze () {
   //
   if (!level) {
     learn_empty_clause ();
-    if (external->learner) external->export_learned_empty_clause ();
+    if (external->learner)
+      external->export_learned_empty_clause ();
+    // lrat_chain.clear (); done in learn_empty_clause
     STOP (analyze);
     return;
   }
@@ -690,27 +960,106 @@ void Internal::analyze () {
   // follows the assignment order and a more complex algorithm to find
   // articulation points is not necessary.
   //
-  Clause * reason = conflict;
+  Clause *reason = conflict;
   LOG (reason, "analyzing conflict");
 
   assert (clause.empty ());
+  assert (lrat_chain.empty ());
 
-  int i = trail.size ();        // Start at end-of-trail.
-  int open = 0;                 // Seen but not processed on this level.
-  int uip = 0;                  // The first UIP literal.
+  const auto &t = &trail;
+  int i = t->size ();      // Start at end-of-trail.
+  int open = 0;            // Seen but not processed on this level.
+  int uip = 0;             // The first UIP literal.
+  int resolvent_size = 0;  // without the uip
+  int antecedent_size = 1; // with the uip and without unit literals
+  int conflict_size =
+      0; // size of the conflict without the uip and without unit literals
+  int resolved = 0; // number of resolution (0 = clause in CNF)
+  const bool otfs = opts.otfs;
 
   for (;;) {
-    analyze_reason (uip, reason, open);
+    antecedent_size = 1; // for uip
+    analyze_reason (uip, reason, open, resolvent_size, antecedent_size);
+    if (resolved == 0)
+      conflict_size = antecedent_size - 1;
+    assert (resolvent_size == open + (int) clause.size ());
+
+    if (otfs && resolved > 0 && antecedent_size > 2 &&
+        resolvent_size < antecedent_size) {
+      assert (reason != conflict);
+      LOG (analyzed, "found candidate for OTFS conflict");
+      LOG (reason, "found candidate (size %d) for OTFS resolvent",
+           antecedent_size);
+      reason = on_the_fly_strengthen (reason, uip);
+      assert (conflict_size >= 2);
+      if (opts.bump)
+        bump_variables ();
+
+      if (resolved == 1 && resolvent_size < conflict_size) {
+        // in this case both clauses are part of the CNF, so one subsumes
+        // the other
+        otfs_subsume_clause (reason, conflict);
+        LOG (reason, "changing conflict to");
+        --conflict_size;
+        assert (conflict_size == reason->size);
+        ++stats.otfs.subsumed;
+        ++stats.subsumed;
+        ++stats.conflicts;
+      }
+
+      LOG (reason, "changing conflict to");
+      conflict = reason;
+      if (open == 1) {
+        int forced = 0;
+        const int conflict_level = otfs_find_backtrack_level (forced);
+        int new_level = determine_actual_backtrack_level (conflict_level);
+        UPDATE_AVERAGE (averages.current.level, new_level);
+        backtrack (new_level);
+
+        LOG ("forcing %d", forced);
+        search_assign_driving (forced, conflict);
+
+        conflict = 0;
+        // Clean up.
+        //
+        clear_analyzed_literals ();
+        clear_analyzed_levels ();
+        clause.clear ();
+        STOP (analyze);
+        return;
+      }
+
+      resolved = 0;
+      clear_analyzed_literals ();
+      // clear_analyzed_levels (); not needed because marking the exact same
+      // again
+      clause.clear ();
+      resolvent_size = 0;
+      antecedent_size = 1;
+      open = 0;
+      analyze_reason (0, reason, open, resolvent_size, antecedent_size);
+      conflict_size = antecedent_size - 1;
+      assert (open > 1);
+    }
+
+    ++resolved;
+
     uip = 0;
     while (!uip) {
       assert (i > 0);
-      const int lit = trail[--i];
-      if (!flags (lit).seen) continue;
-      if (var (lit).level == level) uip = lit;
+      const int lit = (*t)[--i];
+      if (!flags (lit).seen)
+        continue;
+      if (var (lit).level == level)
+        uip = lit;
     }
-    if (!--open) break;
+    if (!--open)
+      break;
     reason = var (uip).reason;
+    assert (reason != external_reason);
     LOG (reason, "analyzing %d reason", uip);
+    assert (resolvent_size);
+    --resolvent_size;
   }
   LOG ("first UIP %d", uip);
   clause.push_back (-uip);
@@ -726,56 +1075,86 @@ void Internal::analyze () {
   stats.learned.clauses++;
   assert (glue < size);
 
+  // up to this point lrat_chain contains the proof for current clause in
+  // reversed order. in minimize and shrink the clause is changed and
+  // therefore lrat_chain has to be extended. Unfortunately we cannot create
+  // the chain directly during minimazation (or shrinking) but afterwards we
+  // can calculate it pretty easily and even better the same algorithm works
+  // for both shrinking and minimization.
 
   // Minimize the 1st UIP clause as pioneered by Niklas Soerensson in
   // MiniSAT and described in our joint SAT'09 paper.
   //
   if (size > 1) {
     if (opts.shrink)
-      shrink_and_minimize_clause();
+      shrink_and_minimize_clause ();
     else if (opts.minimize)
-      minimize_clause();
+      minimize_clause ();
 
     size = (int) clause.size ();
 
     // Update decision heuristics.
     //
     if (opts.bump)
-      bump_variables();
+      bump_variables ();
 
-    if (external->learner) external->export_learned_large_clause (clause);
+    if (external->learner)
+      external->export_learned_large_clause (clause);
   } else if (external->learner)
-    external->export_learned_unit_clause(-uip);
+    external->export_learned_unit_clause (-uip);
 
   // Update actual size statistics.
   //
-  stats.units    += (size == 1);
+  stats.units += (size == 1);
   stats.binaries += (size == 2);
   UPDATE_AVERAGE (averages.current.size, size);
+
+  // reverse lrat_chain. We could probably work with reversed iterators
+  // (views) to be more efficient but we would have to distinguish in proof
+  //
+  if (lrat) {
+    LOG (unit_chain, "unit chain: ");
+    for (auto id : unit_chain)
+      lrat_chain.push_back (id);
+    unit_chain.clear ();
+    reverse (lrat_chain.begin (), lrat_chain.end ());
+  }
 
   // Determine back-jump level, learn driving clause, backtrack and assign
   // flipped 1st UIP literal.
   //
   int jump;
-  Clause * driving_clause = new_driving_clause (glue, jump);
+  Clause *driving_clause = new_driving_clause (glue, jump);
   UPDATE_AVERAGE (averages.current.jump, jump);
 
-  int new_level = determine_actual_backtrack_level (jump);;
+  int new_level = determine_actual_backtrack_level (jump);
   UPDATE_AVERAGE (averages.current.level, new_level);
   backtrack (new_level);
 
-  if (uip) search_assign_driving (-uip, driving_clause);
-  else learn_empty_clause ();
+  // It should hold that (!level <=> size == 1)
+  //                 and (!uip   <=> size == 0)
+  // this means either we have already learned a clause => size >= 2
+  // in this case we will not learn empty clause or unit here
+  // or we haven't actually learned a clause in new_driving_clause
+  // then lrat_chain is still valid and we will learn a unit or empty clause
+  //
+  if (uip) {
+    search_assign_driving (-uip, driving_clause);
+  } else
+    learn_empty_clause ();
 
-  if (stable) reluctant.tick (); // Reluctant has its own 'conflict' counter.
+  if (stable)
+    reluctant.tick (); // Reluctant has its own 'conflict' counter.
 
   // Clean up.
   //
   clear_analyzed_literals ();
+  clear_unit_analyzed_literals ();
   clear_analyzed_levels ();
   clause.clear ();
   conflict = 0;
 
+  lrat_chain.clear ();
   STOP (analyze);
 
   if (driving_clause && opts.eagersubsume)
@@ -787,6 +1166,9 @@ void Internal::analyze () {
 // variables before propagating the unit (and hides the actual remaining
 // variables after propagating it).
 
-void Internal::iterate () { iterating = false; report ('i'); }
-
+void Internal::iterate () {
+  iterating = false;
+  report ('i');
 }
+
+} // namespace CaDiCaL
